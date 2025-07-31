@@ -17,6 +17,7 @@ import com.example.androidui.ui.components.ButtonsScreen
 import com.example.androidui.ui.components.CardsScreen
 import com.example.androidui.ui.components.ComponentCatalogScreen
 import com.example.androidui.ui.components.InputFormsScreen
+import com.example.androidui.ui.components.ProgressFeedbackScreen
 
 /**
  * Main navigation composable for the Compose Cookbook app
@@ -77,10 +78,7 @@ fun ComposeCookbookNavigation(
             }
             
             composable(NavigationRoutes.FEEDBACK) {
-                PlaceholderScreen(
-                    title = "Feedback & Status",
-                    description = "Coming soon! Progress indicators, snackbars, alerts, and status components."
-                )
+                ProgressFeedbackScreen()
             }
             
             composable(NavigationRoutes.SELECTION) {
