@@ -14,6 +14,7 @@ import androidx.navigation.compose.composable
 import androidx.navigation.compose.currentBackStackEntryAsState
 import androidx.navigation.compose.rememberNavController
 import com.example.androidui.ui.components.ButtonsScreen
+import com.example.androidui.ui.components.CardsScreen
 import com.example.androidui.ui.components.ComponentCatalogScreen
 
 /**
@@ -60,11 +61,7 @@ fun ComposeCookbookNavigation(
             }
             
             composable(NavigationRoutes.CARDS) {
-                // Placeholder for Cards screen (will be implemented)
-                PlaceholderScreen(
-                    title = "Cards & Surfaces",
-                    description = "Coming soon! This screen will showcase all Material 3 card variants including filled, elevated, and outlined cards with various content layouts."
-                )
+                CardsScreen()
             }
             
             composable(NavigationRoutes.NAVIGATION) {
