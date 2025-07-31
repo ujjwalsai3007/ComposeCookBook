@@ -199,7 +199,7 @@ object ComponentRegistry {
                     id = "bottom_navigation",
                     name = "Bottom Navigation",
                     description = "Tab-based navigation at bottom of screen",
-                    status = CompletionStatus.PLANNED,
+                    status = CompletionStatus.COMPLETED,
                     route = "navigation",
                     complexity = ComponentComplexity.INTERMEDIATE
                 ),
@@ -207,7 +207,7 @@ object ComponentRegistry {
                     id = "navigation_drawer",
                     name = "Navigation Drawer",
                     description = "Side panel navigation for main sections",
-                    status = CompletionStatus.PLANNED,
+                    status = CompletionStatus.COMPLETED,
                     route = "navigation", 
                     complexity = ComponentComplexity.ADVANCED
                 ),
@@ -215,7 +215,7 @@ object ComponentRegistry {
                     id = "top_app_bar",
                     name = "Top App Bar",
                     description = "Header navigation with actions",
-                    status = CompletionStatus.PLANNED,
+                    status = CompletionStatus.COMPLETED,
                     route = "navigation",
                     complexity = ComponentComplexity.INTERMEDIATE
                 )
@@ -225,25 +225,113 @@ object ComponentRegistry {
         ComponentCategory(
             id = "input",
             name = "Input & Forms",
-            description = "Text fields, dropdowns, and form controls",
+            description = "Text fields, dropdowns, date pickers, and form controls",
             icon = Icons.Default.Edit,
-            componentCount = 10,
-            completionStatus = CompletionStatus.PLANNED,
+            componentCount = 15,
+            completionStatus = CompletionStatus.COMPLETED,
             route = "input",
             components = listOf(
                 ComponentItem(
                     id = "text_field",
-                    name = "Text Field",
-                    description = "Single and multiline text input",
-                    status = CompletionStatus.PLANNED,
+                    name = "TextField",
+                    description = "Standard text input with Material 3 styling",
+                    status = CompletionStatus.COMPLETED,
+                    route = "input",
+                    complexity = ComponentComplexity.BASIC
+                ),
+                ComponentItem(
+                    id = "outlined_text_field",
+                    name = "OutlinedTextField",
+                    description = "Text input with outlined border styling",
+                    status = CompletionStatus.COMPLETED,
+                    route = "input",
+                    complexity = ComponentComplexity.BASIC
+                ),
+                ComponentItem(
+                    id = "date_picker",
+                    name = "DatePicker",
+                    description = "Date selection with calendar interface",
+                    status = CompletionStatus.COMPLETED,
                     route = "input",
                     complexity = ComponentComplexity.INTERMEDIATE
                 ),
                 ComponentItem(
-                    id = "dropdown",
-                    name = "Dropdown Menu",
-                    description = "Selection from list of options",
-                    status = CompletionStatus.PLANNED,
+                    id = "date_picker_dialog",
+                    name = "DatePickerDialog",
+                    description = "Modal date picker dialog",
+                    status = CompletionStatus.COMPLETED,
+                    route = "input",
+                    complexity = ComponentComplexity.INTERMEDIATE
+                ),
+                ComponentItem(
+                    id = "time_picker",
+                    name = "TimePicker",
+                    description = "Time selection with clock interface",
+                    status = CompletionStatus.COMPLETED,
+                    route = "input",
+                    complexity = ComponentComplexity.INTERMEDIATE
+                ),
+                ComponentItem(
+                    id = "time_input",
+                    name = "TimeInput",
+                    description = "Manual time input fields",
+                    status = CompletionStatus.COMPLETED,
+                    route = "input",
+                    complexity = ComponentComplexity.BASIC
+                ),
+                ComponentItem(
+                    id = "search_bar",
+                    name = "SearchBar",
+                    description = "Material 3 search interface",
+                    status = CompletionStatus.COMPLETED,
+                    route = "input",
+                    complexity = ComponentComplexity.INTERMEDIATE
+                ),
+                ComponentItem(
+                    id = "checkbox",
+                    name = "Checkbox",
+                    description = "Binary selection checkbox",
+                    status = CompletionStatus.COMPLETED,
+                    route = "input",
+                    complexity = ComponentComplexity.BASIC
+                ),
+                ComponentItem(
+                    id = "radio_button",
+                    name = "RadioButton",
+                    description = "Single selection from group",
+                    status = CompletionStatus.COMPLETED,
+                    route = "input",
+                    complexity = ComponentComplexity.BASIC
+                ),
+                ComponentItem(
+                    id = "switch",
+                    name = "Switch",
+                    description = "Toggle switch for binary states",
+                    status = CompletionStatus.COMPLETED,
+                    route = "input",
+                    complexity = ComponentComplexity.BASIC
+                ),
+                ComponentItem(
+                    id = "slider",
+                    name = "Slider",
+                    description = "Value selection on continuous range",
+                    status = CompletionStatus.COMPLETED,
+                    route = "input",
+                    complexity = ComponentComplexity.INTERMEDIATE
+                ),
+                ComponentItem(
+                    id = "range_slider",
+                    name = "RangeSlider",
+                    description = "Dual-handle range selection",
+                    status = CompletionStatus.COMPLETED,
+                    route = "input",
+                    complexity = ComponentComplexity.ADVANCED
+                ),
+                ComponentItem(
+                    id = "dropdown_menu",
+                    name = "DropdownMenu",
+                    description = "Menu with selectable options",
+                    status = CompletionStatus.COMPLETED,
                     route = "input",
                     complexity = ComponentComplexity.INTERMEDIATE
                 )
@@ -263,7 +351,7 @@ object ComponentRegistry {
                     id = "progress_indicator",
                     name = "Progress Indicator",
                     description = "Linear and circular progress displays",
-                    status = CompletionStatus.PLANNED,
+                    status = CompletionStatus.COMPLETED,
                     route = "feedback",
                     complexity = ComponentComplexity.BASIC
                 ),
@@ -271,7 +359,7 @@ object ComponentRegistry {
                     id = "snackbar",
                     name = "Snackbar",
                     description = "Brief messages with optional actions",
-                    status = CompletionStatus.PLANNED,
+                    status = CompletionStatus.COMPLETED,
                     route = "feedback",
                     complexity = ComponentComplexity.INTERMEDIATE
                 )
