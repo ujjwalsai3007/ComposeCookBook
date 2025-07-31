@@ -115,15 +115,15 @@ object ComponentRegistry {
             name = "Cards & Surfaces",
             description = "Content containers with elevation and styling",
             icon = Icons.Default.Home,
-            componentCount = 8,
-            completionStatus = CompletionStatus.IN_PROGRESS,
+            componentCount = 12,
+            completionStatus = CompletionStatus.COMPLETED,
             route = "cards",
             components = listOf(
                 ComponentItem(
                     id = "filled_card",
                     name = "Filled Card",
                     description = "Standard cards with filled background",
-                    status = CompletionStatus.PLANNED,
+                    status = CompletionStatus.COMPLETED,
                     route = "cards",
                     complexity = ComponentComplexity.BASIC
                 ),
@@ -131,7 +131,7 @@ object ComponentRegistry {
                     id = "elevated_card",
                     name = "Elevated Card", 
                     description = "Cards with shadow elevation",
-                    status = CompletionStatus.PLANNED,
+                    status = CompletionStatus.COMPLETED,
                     route = "cards",
                     complexity = ComponentComplexity.BASIC
                 ),
@@ -139,9 +139,49 @@ object ComponentRegistry {
                     id = "outlined_card",
                     name = "Outlined Card",
                     description = "Cards with border styling",
-                    status = CompletionStatus.PLANNED,
+                    status = CompletionStatus.COMPLETED,
                     route = "cards",
                     complexity = ComponentComplexity.BASIC
+                ),
+                ComponentItem(
+                    id = "interactive_card",
+                    name = "Interactive Card",
+                    description = "Clickable cards with state management",
+                    status = CompletionStatus.COMPLETED,
+                    route = "cards",
+                    complexity = ComponentComplexity.INTERMEDIATE
+                ),
+                ComponentItem(
+                    id = "media_card",
+                    name = "Media Card",
+                    description = "Cards with images and media content",
+                    status = CompletionStatus.COMPLETED,
+                    route = "cards",
+                    complexity = ComponentComplexity.INTERMEDIATE
+                ),
+                ComponentItem(
+                    id = "profile_card",
+                    name = "Profile Card",
+                    description = "User profile cards with avatar and actions",
+                    status = CompletionStatus.COMPLETED,
+                    route = "cards",
+                    complexity = ComponentComplexity.INTERMEDIATE
+                ),
+                ComponentItem(
+                    id = "product_card",
+                    name = "Product Card",
+                    description = "E-commerce product cards with ratings and actions",
+                    status = CompletionStatus.COMPLETED,
+                    route = "cards",
+                    complexity = ComponentComplexity.ADVANCED
+                ),
+                ComponentItem(
+                    id = "notification_card",
+                    name = "Notification Card",
+                    description = "Alert and notification cards with actions",
+                    status = CompletionStatus.COMPLETED,
+                    route = "cards",
+                    complexity = ComponentComplexity.INTERMEDIATE
                 )
             )
         ),
