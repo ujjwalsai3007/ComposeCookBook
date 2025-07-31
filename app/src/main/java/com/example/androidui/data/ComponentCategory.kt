@@ -340,28 +340,108 @@ object ComponentRegistry {
         
         ComponentCategory(
             id = "feedback",
-            name = "Feedback & Status",
-            description = "Progress indicators, snackbars, and alerts",
+            name = "Progress & Feedback",
+            description = "Progress indicators, loading states, snackbars, and user feedback",
             icon = Icons.Default.Notifications,
-            componentCount = 7,
-            completionStatus = CompletionStatus.PLANNED,
+            componentCount = 12,
+            completionStatus = CompletionStatus.COMPLETED,
             route = "feedback",
             components = listOf(
                 ComponentItem(
-                    id = "progress_indicator",
-                    name = "Progress Indicator",
-                    description = "Linear and circular progress displays",
+                    id = "circular_progress",
+                    name = "CircularProgressIndicator",
+                    description = "Circular progress for loading operations",
                     status = CompletionStatus.COMPLETED,
                     route = "feedback",
                     complexity = ComponentComplexity.BASIC
                 ),
                 ComponentItem(
+                    id = "linear_progress",
+                    name = "LinearProgressIndicator",
+                    description = "Linear progress bars for file uploads and downloads",
+                    status = CompletionStatus.COMPLETED,
+                    route = "feedback",
+                    complexity = ComponentComplexity.BASIC
+                ),
+                ComponentItem(
+                    id = "circular_wavy_progress",
+                    name = "CircularWavyProgressIndicator",
+                    description = "Enhanced circular progress with wavy animation",
+                    status = CompletionStatus.COMPLETED,
+                    route = "feedback",
+                    complexity = ComponentComplexity.INTERMEDIATE
+                ),
+                ComponentItem(
+                    id = "contained_loading",
+                    name = "ContainedLoadingIndicator",
+                    description = "Loading indicator within containers",
+                    status = CompletionStatus.COMPLETED,
+                    route = "feedback",
+                    complexity = ComponentComplexity.INTERMEDIATE
+                ),
+                ComponentItem(
                     id = "snackbar",
-                    name = "Snackbar",
+                    name = "SnackBar",
                     description = "Brief messages with optional actions",
                     status = CompletionStatus.COMPLETED,
                     route = "feedback",
                     complexity = ComponentComplexity.INTERMEDIATE
+                ),
+                ComponentItem(
+                    id = "badge",
+                    name = "Badge",
+                    description = "Small status indicators and counters",
+                    status = CompletionStatus.COMPLETED,
+                    route = "feedback",
+                    complexity = ComponentComplexity.BASIC
+                ),
+                ComponentItem(
+                    id = "badged_box",
+                    name = "BadgedBox",
+                    description = "Container with badge overlay for notifications",
+                    status = CompletionStatus.COMPLETED,
+                    route = "feedback",
+                    complexity = ComponentComplexity.INTERMEDIATE
+                ),
+                ComponentItem(
+                    id = "loading_states",
+                    name = "Loading States",
+                    description = "Complete loading state patterns for screens",
+                    status = CompletionStatus.COMPLETED,
+                    route = "feedback",
+                    complexity = ComponentComplexity.ADVANCED
+                ),
+                ComponentItem(
+                    id = "error_states",
+                    name = "Error States",
+                    description = "Error handling and retry patterns",
+                    status = CompletionStatus.COMPLETED,
+                    route = "feedback",
+                    complexity = ComponentComplexity.ADVANCED
+                ),
+                ComponentItem(
+                    id = "success_feedback",
+                    name = "Success Feedback",
+                    description = "Success states and confirmation patterns",
+                    status = CompletionStatus.COMPLETED,
+                    route = "feedback",
+                    complexity = ComponentComplexity.INTERMEDIATE
+                ),
+                ComponentItem(
+                    id = "status_indicators",
+                    name = "Status Indicators",
+                    description = "Online/offline and connection status indicators",
+                    status = CompletionStatus.COMPLETED,
+                    route = "feedback",
+                    complexity = ComponentComplexity.INTERMEDIATE
+                ),
+                ComponentItem(
+                    id = "toast_alternatives",
+                    name = "Toast Alternatives",
+                    description = "Modern alternatives to Android Toast messages",
+                    status = CompletionStatus.COMPLETED,
+                    route = "feedback",
+                    complexity = ComponentComplexity.ADVANCED
                 )
             )
         ),
