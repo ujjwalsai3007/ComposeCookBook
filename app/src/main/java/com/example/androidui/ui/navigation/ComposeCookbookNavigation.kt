@@ -16,6 +16,7 @@ import androidx.navigation.compose.rememberNavController
 import com.example.androidui.ui.components.ButtonsScreen
 import com.example.androidui.ui.components.CardsScreen
 import com.example.androidui.ui.components.ComponentCatalogScreen
+import com.example.androidui.ui.components.InputFormsScreen
 
 /**
  * Main navigation composable for the Compose Cookbook app
@@ -72,10 +73,7 @@ fun ComposeCookbookNavigation(
             }
             
             composable(NavigationRoutes.INPUT) {
-                PlaceholderScreen(
-                    title = "Input & Forms",
-                    description = "Coming soon! Text fields, dropdowns, autocomplete, and form validation components."
-                )
+                InputFormsScreen()
             }
             
             composable(NavigationRoutes.FEEDBACK) {
