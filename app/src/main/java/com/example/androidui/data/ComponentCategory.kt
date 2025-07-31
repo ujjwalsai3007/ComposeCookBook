@@ -1,0 +1,304 @@
+package com.example.androidui.data
+
+import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.filled.CheckCircle
+import androidx.compose.material.icons.filled.Edit
+import androidx.compose.material.icons.filled.Info
+import androidx.compose.material.icons.filled.List
+import androidx.compose.material.icons.filled.Menu
+import androidx.compose.material.icons.filled.Notifications
+import androidx.compose.material.icons.filled.Star
+import androidx.compose.material.icons.filled.Home
+import androidx.compose.ui.graphics.vector.ImageVector
+
+/**
+ * Data model representing a component category in the Compose Cookbook
+ */
+data class ComponentCategory(
+    val id: String,
+    val name: String,
+    val description: String,
+    val icon: ImageVector,
+    val componentCount: Int,
+    val completionStatus: CompletionStatus,
+    val route: String,
+    val components: List<ComponentItem> = emptyList()
+)
+
+/**
+ * Data model for individual components within categories
+ */
+data class ComponentItem(
+    val id: String,
+    val name: String,
+    val description: String,
+    val status: CompletionStatus,
+    val previewImageUrl: String? = null,
+    val route: String,
+    val complexity: ComponentComplexity
+)
+
+enum class CompletionStatus {
+    COMPLETED,      // ✅ Fully implemented
+    IN_PROGRESS,    // 🚧 Currently working on
+    PLANNED,        // 📋 Scheduled for development
+    EXPERIMENTAL    // 🧪 Testing new features
+}
+
+enum class ComponentComplexity {
+    BASIC,          // Simple, single-purpose components
+    INTERMEDIATE,   // Components with multiple variants
+    ADVANCED        // Complex, highly customizable components
+}
+
+/**
+ * Static data for all component categories
+ * This acts as our component registry and navigation source
+ */
+object ComponentRegistry {
+    
+    val categories = listOf(
+        ComponentCategory(
+            id = "buttons",
+            name = "Buttons & Actions",
+            description = "Interactive elements for user actions",
+            icon = Icons.Default.Star,
+            componentCount = 12,
+            completionStatus = CompletionStatus.COMPLETED,
+            route = "buttons",
+            components = listOf(
+                ComponentItem(
+                    id = "filled_button",
+                    name = "Filled Button",
+                    description = "Primary action buttons with filled background",
+                    status = CompletionStatus.COMPLETED,
+                    route = "buttons",
+                    complexity = ComponentComplexity.BASIC
+                ),
+                ComponentItem(
+                    id = "outlined_button", 
+                    name = "Outlined Button",
+                    description = "Secondary action buttons with border",
+                    status = CompletionStatus.COMPLETED,
+                    route = "buttons",
+                    complexity = ComponentComplexity.BASIC
+                ),
+                ComponentItem(
+                    id = "text_button",
+                    name = "Text Button", 
+                    description = "Low emphasis buttons without background",
+                    status = CompletionStatus.COMPLETED,
+                    route = "buttons",
+                    complexity = ComponentComplexity.BASIC
+                ),
+                ComponentItem(
+                    id = "fab",
+                    name = "Floating Action Button",
+                    description = "Primary floating actions with multiple sizes",
+                    status = CompletionStatus.COMPLETED,
+                    route = "buttons", 
+                    complexity = ComponentComplexity.INTERMEDIATE
+                ),
+                ComponentItem(
+                    id = "icon_button",
+                    name = "Icon Button",
+                    description = "Icon-only buttons for compact interfaces",
+                    status = CompletionStatus.COMPLETED,
+                    route = "buttons",
+                    complexity = ComponentComplexity.BASIC
+                )
+            )
+        ),
+        
+        ComponentCategory(
+            id = "cards",
+            name = "Cards & Surfaces",
+            description = "Content containers with elevation and styling",
+            icon = Icons.Default.Home,
+            componentCount = 8,
+            completionStatus = CompletionStatus.IN_PROGRESS,
+            route = "cards",
+            components = listOf(
+                ComponentItem(
+                    id = "filled_card",
+                    name = "Filled Card",
+                    description = "Standard cards with filled background",
+                    status = CompletionStatus.PLANNED,
+                    route = "cards",
+                    complexity = ComponentComplexity.BASIC
+                ),
+                ComponentItem(
+                    id = "elevated_card",
+                    name = "Elevated Card", 
+                    description = "Cards with shadow elevation",
+                    status = CompletionStatus.PLANNED,
+                    route = "cards",
+                    complexity = ComponentComplexity.BASIC
+                ),
+                ComponentItem(
+                    id = "outlined_card",
+                    name = "Outlined Card",
+                    description = "Cards with border styling",
+                    status = CompletionStatus.PLANNED,
+                    route = "cards",
+                    complexity = ComponentComplexity.BASIC
+                )
+            )
+        ),
+        
+        ComponentCategory(
+            id = "navigation",
+            name = "Navigation",
+            description = "Components for app navigation and wayfinding",
+            icon = Icons.Default.Menu,
+            componentCount = 6,
+            completionStatus = CompletionStatus.PLANNED,
+            route = "navigation",
+            components = listOf(
+                ComponentItem(
+                    id = "bottom_navigation",
+                    name = "Bottom Navigation",
+                    description = "Tab-based navigation at bottom of screen",
+                    status = CompletionStatus.PLANNED,
+                    route = "navigation",
+                    complexity = ComponentComplexity.INTERMEDIATE
+                ),
+                ComponentItem(
+                    id = "navigation_drawer",
+                    name = "Navigation Drawer",
+                    description = "Side panel navigation for main sections",
+                    status = CompletionStatus.PLANNED,
+                    route = "navigation", 
+                    complexity = ComponentComplexity.ADVANCED
+                ),
+                ComponentItem(
+                    id = "top_app_bar",
+                    name = "Top App Bar",
+                    description = "Header navigation with actions",
+                    status = CompletionStatus.PLANNED,
+                    route = "navigation",
+                    complexity = ComponentComplexity.INTERMEDIATE
+                )
+            )
+        ),
+        
+        ComponentCategory(
+            id = "input",
+            name = "Input & Forms",
+            description = "Text fields, dropdowns, and form controls",
+            icon = Icons.Default.Edit,
+            componentCount = 10,
+            completionStatus = CompletionStatus.PLANNED,
+            route = "input",
+            components = listOf(
+                ComponentItem(
+                    id = "text_field",
+                    name = "Text Field",
+                    description = "Single and multiline text input",
+                    status = CompletionStatus.PLANNED,
+                    route = "input",
+                    complexity = ComponentComplexity.INTERMEDIATE
+                ),
+                ComponentItem(
+                    id = "dropdown",
+                    name = "Dropdown Menu",
+                    description = "Selection from list of options",
+                    status = CompletionStatus.PLANNED,
+                    route = "input",
+                    complexity = ComponentComplexity.INTERMEDIATE
+                )
+            )
+        ),
+        
+        ComponentCategory(
+            id = "feedback",
+            name = "Feedback & Status",
+            description = "Progress indicators, snackbars, and alerts",
+            icon = Icons.Default.Notifications,
+            componentCount = 7,
+            completionStatus = CompletionStatus.PLANNED,
+            route = "feedback",
+            components = listOf(
+                ComponentItem(
+                    id = "progress_indicator",
+                    name = "Progress Indicator",
+                    description = "Linear and circular progress displays",
+                    status = CompletionStatus.PLANNED,
+                    route = "feedback",
+                    complexity = ComponentComplexity.BASIC
+                ),
+                ComponentItem(
+                    id = "snackbar",
+                    name = "Snackbar",
+                    description = "Brief messages with optional actions",
+                    status = CompletionStatus.PLANNED,
+                    route = "feedback",
+                    complexity = ComponentComplexity.INTERMEDIATE
+                )
+            )
+        ),
+        
+        ComponentCategory(
+            id = "selection",
+            name = "Selection Controls",
+            description = "Checkboxes, switches, chips, and sliders",
+            icon = Icons.Default.CheckCircle,
+            componentCount = 8,
+            completionStatus = CompletionStatus.PLANNED,
+            route = "selection"
+        ),
+        
+        ComponentCategory(
+            id = "lists",
+            name = "Lists & Data Display",
+            description = "Lazy lists, grids, and data presentation",
+            icon = Icons.Default.List,
+            componentCount = 5,
+            completionStatus = CompletionStatus.PLANNED,
+            route = "lists"
+        ),
+        
+        ComponentCategory(
+            id = "dialogs",
+            name = "Dialogs & Overlays",
+            description = "Modal dialogs, bottom sheets, and popups",
+            icon = Icons.Default.Info,
+            componentCount = 6,
+            completionStatus = CompletionStatus.PLANNED,
+            route = "dialogs"
+        )
+    )
+    
+    /**
+     * Get all components across all categories
+     */
+    fun getAllComponents(): List<ComponentItem> {
+        return categories.flatMap { it.components }
+    }
+    
+    /**
+     * Search components by name or description
+     */
+    fun searchComponents(query: String): List<ComponentItem> {
+        if (query.isBlank()) return getAllComponents()
+        
+        return getAllComponents().filter { component ->
+            component.name.contains(query, ignoreCase = true) ||
+            component.description.contains(query, ignoreCase = true)
+        }
+    }
+    
+    /**
+     * Get components by completion status
+     */
+    fun getComponentsByStatus(status: CompletionStatus): List<ComponentItem> {
+        return getAllComponents().filter { it.status == status }
+    }
+    
+    /**
+     * Get category by ID
+     */
+    fun getCategoryById(id: String): ComponentCategory? {
+        return categories.find { it.id == id }
+    }
+}
