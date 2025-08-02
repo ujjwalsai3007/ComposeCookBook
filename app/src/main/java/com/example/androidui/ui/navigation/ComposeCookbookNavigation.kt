@@ -16,6 +16,7 @@ import androidx.navigation.compose.rememberNavController
 import com.example.androidui.ui.components.ButtonsScreen
 import com.example.androidui.ui.components.CardsScreen
 import com.example.androidui.ui.components.ComponentCatalogScreen
+import com.example.androidui.ui.components.DialogsScreen
 import com.example.androidui.ui.components.InputFormsScreen
 import com.example.androidui.ui.components.ListsScreen
 import com.example.androidui.ui.components.NavigationScreen
@@ -92,10 +93,7 @@ fun ComposeCookbookNavigation(
             }
             
             composable(NavigationRoutes.DIALOGS) {
-                PlaceholderScreen(
-                    title = "Dialogs & Overlays",
-                    description = "Coming soon! Alert dialogs, bottom sheets, tooltips, and overlay components."
-                )
+                DialogsScreen()
             }
         }
     }

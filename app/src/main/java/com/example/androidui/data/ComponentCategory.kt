@@ -625,9 +625,131 @@ object ComponentRegistry {
             name = "Dialogs & Overlays",
             description = "Modal dialogs, bottom sheets, and popups",
             icon = Icons.Default.Info,
-            componentCount = 6,
-            completionStatus = CompletionStatus.PLANNED,
-            route = "dialogs"
+            componentCount = 15,
+            completionStatus = CompletionStatus.COMPLETED,
+            route = "dialogs",
+            components = listOf(
+                ComponentItem(
+                    id = "alert_dialog",
+                    name = "Alert Dialog",
+                    description = "Basic, confirmation, and destructive action dialogs",
+                    status = CompletionStatus.COMPLETED,
+                    route = "dialogs",
+                    complexity = ComponentComplexity.BASIC
+                ),
+                ComponentItem(
+                    id = "custom_dialog",
+                    name = "Custom Dialog",
+                    description = "Branded dialogs with custom styling and layouts",
+                    status = CompletionStatus.COMPLETED,
+                    route = "dialogs",
+                    complexity = ComponentComplexity.INTERMEDIATE
+                ),
+                ComponentItem(
+                    id = "fullscreen_dialog",
+                    name = "Full-Screen Dialog",
+                    description = "Full-screen overlays for complex forms and workflows",
+                    status = CompletionStatus.COMPLETED,
+                    route = "dialogs",
+                    complexity = ComponentComplexity.ADVANCED
+                ),
+                ComponentItem(
+                    id = "modal_bottom_sheet",
+                    name = "Modal Bottom Sheet",
+                    description = "Temporary overlays that slide up from bottom",
+                    status = CompletionStatus.COMPLETED,
+                    route = "dialogs",
+                    complexity = ComponentComplexity.INTERMEDIATE
+                ),
+                ComponentItem(
+                    id = "date_picker_dialog",
+                    name = "Date Picker Dialog",
+                    description = "Material 3 date selection with calendar view",
+                    status = CompletionStatus.COMPLETED,
+                    route = "dialogs",
+                    complexity = ComponentComplexity.INTERMEDIATE
+                ),
+                ComponentItem(
+                    id = "time_picker_dialog",
+                    name = "Time Picker Dialog",
+                    description = "Material 3 time selection with clock interface",
+                    status = CompletionStatus.COMPLETED,
+                    route = "dialogs",
+                    complexity = ComponentComplexity.INTERMEDIATE
+                ),
+                ComponentItem(
+                    id = "tooltip",
+                    name = "Tooltip",
+                    description = "Plain and rich tooltips for UI element explanation",
+                    status = CompletionStatus.COMPLETED,
+                    route = "dialogs",
+                    complexity = ComponentComplexity.BASIC
+                ),
+                ComponentItem(
+                    id = "dropdown_menu",
+                    name = "Dropdown Menu",
+                    description = "Context menus with actions and hierarchical options",
+                    status = CompletionStatus.COMPLETED,
+                    route = "dialogs",
+                    complexity = ComponentComplexity.BASIC
+                ),
+                ComponentItem(
+                    id = "loading_overlay",
+                    name = "Loading Overlay",
+                    description = "Full-screen loading states with progress indication",
+                    status = CompletionStatus.COMPLETED,
+                    route = "dialogs",
+                    complexity = ComponentComplexity.INTERMEDIATE
+                ),
+                ComponentItem(
+                    id = "error_dialog",
+                    name = "Error Dialog",
+                    description = "User-friendly error handling with recovery options",
+                    status = CompletionStatus.COMPLETED,
+                    route = "dialogs",
+                    complexity = ComponentComplexity.INTERMEDIATE
+                ),
+                ComponentItem(
+                    id = "success_dialog",
+                    name = "Success Dialog",
+                    description = "Positive feedback dialogs for completed actions",
+                    status = CompletionStatus.COMPLETED,
+                    route = "dialogs",
+                    complexity = ComponentComplexity.BASIC
+                ),
+                ComponentItem(
+                    id = "confirmation_flow",
+                    name = "Confirmation Flow",
+                    description = "Multi-step confirmation patterns for critical actions",
+                    status = CompletionStatus.COMPLETED,
+                    route = "dialogs",
+                    complexity = ComponentComplexity.ADVANCED
+                ),
+                ComponentItem(
+                    id = "contextual_overlay",
+                    name = "Contextual Overlay",
+                    description = "Search suggestions, notifications, and popup patterns",
+                    status = CompletionStatus.COMPLETED,
+                    route = "dialogs",
+                    complexity = ComponentComplexity.INTERMEDIATE
+                ),
+                ComponentItem(
+                    id = "multi_step_dialog",
+                    name = "Multi-Step Dialog",
+                    description = "Complex workflows like onboarding and checkout",
+                    status = CompletionStatus.COMPLETED,
+                    route = "dialogs",
+                    complexity = ComponentComplexity.ADVANCED
+                ),
+                ComponentItem(
+                    id = "bottom_sheet_patterns",
+                    name = "Bottom Sheet Patterns",
+                    description = "Share dialogs, action menus, and filter options",
+                    status = CompletionStatus.COMPLETED,
+                    route = "dialogs",
+                    complexity = ComponentComplexity.INTERMEDIATE
+                )
+            )
         )
     )
     
