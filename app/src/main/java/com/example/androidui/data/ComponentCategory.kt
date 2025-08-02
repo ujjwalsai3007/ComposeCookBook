@@ -191,14 +191,22 @@ object ComponentRegistry {
             name = "Navigation",
             description = "Components for app navigation and wayfinding",
             icon = Icons.Default.Menu,
-            componentCount = 6,
-            completionStatus = CompletionStatus.PLANNED,
+            componentCount = 10,
+            completionStatus = CompletionStatus.COMPLETED,
             route = "navigation",
             components = listOf(
                 ComponentItem(
-                    id = "bottom_navigation",
-                    name = "Bottom Navigation",
-                    description = "Tab-based navigation at bottom of screen",
+                    id = "navigation_bar",
+                    name = "Navigation Bar",
+                    description = "Bottom navigation with badges and state management",
+                    status = CompletionStatus.COMPLETED,
+                    route = "navigation",
+                    complexity = ComponentComplexity.INTERMEDIATE
+                ),
+                ComponentItem(
+                    id = "navigation_rail",
+                    name = "Navigation Rail",
+                    description = "Vertical navigation for tablets and wide screens",
                     status = CompletionStatus.COMPLETED,
                     route = "navigation",
                     complexity = ComponentComplexity.INTERMEDIATE
@@ -206,7 +214,7 @@ object ComponentRegistry {
                 ComponentItem(
                     id = "navigation_drawer",
                     name = "Navigation Drawer",
-                    description = "Side panel navigation for main sections",
+                    description = "Modal and permanent side navigation panels",
                     status = CompletionStatus.COMPLETED,
                     route = "navigation", 
                     complexity = ComponentComplexity.ADVANCED
@@ -214,10 +222,58 @@ object ComponentRegistry {
                 ComponentItem(
                     id = "top_app_bar",
                     name = "Top App Bar",
-                    description = "Header navigation with actions",
+                    description = "Standard, medium, and large app bars with actions",
                     status = CompletionStatus.COMPLETED,
                     route = "navigation",
                     complexity = ComponentComplexity.INTERMEDIATE
+                ),
+                ComponentItem(
+                    id = "search_bar",
+                    name = "Search Bar",
+                    description = "Expandable search with suggestions and history",
+                    status = CompletionStatus.COMPLETED,
+                    route = "navigation",
+                    complexity = ComponentComplexity.INTERMEDIATE
+                ),
+                ComponentItem(
+                    id = "tab_row",
+                    name = "Tab Components",
+                    description = "Fixed and scrollable tabs with icons and labels",
+                    status = CompletionStatus.COMPLETED,
+                    route = "navigation",
+                    complexity = ComponentComplexity.BASIC
+                ),
+                ComponentItem(
+                    id = "navigation_bar_item",
+                    name = "Navigation Bar Item",
+                    description = "Individual bottom navigation items with badges",
+                    status = CompletionStatus.COMPLETED,
+                    route = "navigation",
+                    complexity = ComponentComplexity.BASIC
+                ),
+                ComponentItem(
+                    id = "navigation_rail_item",
+                    name = "Navigation Rail Item",
+                    description = "Vertical navigation items for rail component",
+                    status = CompletionStatus.COMPLETED,
+                    route = "navigation",
+                    complexity = ComponentComplexity.BASIC
+                ),
+                ComponentItem(
+                    id = "navigation_drawer_item",
+                    name = "Navigation Drawer Item",
+                    description = "Drawer menu items with selection states",
+                    status = CompletionStatus.COMPLETED,
+                    route = "navigation",
+                    complexity = ComponentComplexity.BASIC
+                ),
+                ComponentItem(
+                    id = "tab",
+                    name = "Tab",
+                    description = "Individual tab components with text and icons",
+                    status = CompletionStatus.COMPLETED,
+                    route = "navigation",
+                    complexity = ComponentComplexity.BASIC
                 )
             )
         ),
