@@ -17,6 +17,7 @@ import com.example.androidui.ui.components.ButtonsScreen
 import com.example.androidui.ui.components.CardsScreen
 import com.example.androidui.ui.components.ComponentCatalogScreen
 import com.example.androidui.ui.components.InputFormsScreen
+import com.example.androidui.ui.components.ListsScreen
 import com.example.androidui.ui.components.NavigationScreen
 import com.example.androidui.ui.components.ProgressFeedbackScreen
 
@@ -87,10 +88,7 @@ fun ComposeCookbookNavigation(
             }
             
             composable(NavigationRoutes.LISTS) {
-                PlaceholderScreen(
-                    title = "Lists & Data Display",
-                    description = "Coming soon! Lazy lists, grids, data tables, and collection components."
-                )
+                ListsScreen()
             }
             
             composable(NavigationRoutes.DIALOGS) {
