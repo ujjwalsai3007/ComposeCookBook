@@ -17,6 +17,7 @@ import com.example.androidui.ui.components.ButtonsScreen
 import com.example.androidui.ui.components.CardsScreen
 import com.example.androidui.ui.components.ComponentCatalogScreen
 import com.example.androidui.ui.components.InputFormsScreen
+import com.example.androidui.ui.components.NavigationScreen
 import com.example.androidui.ui.components.ProgressFeedbackScreen
 
 /**
@@ -67,10 +68,7 @@ fun ComposeCookbookNavigation(
             }
             
             composable(NavigationRoutes.NAVIGATION) {
-                PlaceholderScreen(
-                    title = "Navigation Components",
-                    description = "Coming soon! Bottom navigation, navigation drawer, top app bar, and tab components."
-                )
+                NavigationScreen()
             }
             
             composable(NavigationRoutes.INPUT) {
