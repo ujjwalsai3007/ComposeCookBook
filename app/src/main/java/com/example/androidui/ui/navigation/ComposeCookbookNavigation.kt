@@ -15,6 +15,7 @@ import androidx.navigation.compose.currentBackStackEntryAsState
 import androidx.navigation.compose.rememberNavController
 import com.example.androidui.ui.components.ButtonsScreen
 import com.example.androidui.ui.components.CardsScreen
+import com.example.androidui.ui.components.ChipsScreen
 import com.example.androidui.ui.components.ComponentCatalogScreen
 import com.example.androidui.ui.components.DialogsScreen
 import com.example.androidui.ui.components.InputFormsScreen
@@ -82,10 +83,7 @@ fun ComposeCookbookNavigation(
             }
             
             composable(NavigationRoutes.SELECTION) {
-                PlaceholderScreen(
-                    title = "Selection Controls",
-                    description = "Coming soon! Checkboxes, radio buttons, switches, chips, and sliders."
-                )
+                ChipsScreen()
             }
             
             composable(NavigationRoutes.LISTS) {

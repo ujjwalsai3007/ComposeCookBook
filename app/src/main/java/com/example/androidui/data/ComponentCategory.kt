@@ -504,12 +504,110 @@ object ComponentRegistry {
         
         ComponentCategory(
             id = "selection",
-            name = "Selection Controls",
-            description = "Checkboxes, switches, chips, and sliders",
-            icon = Icons.Default.CheckCircle,
-            componentCount = 8,
-            completionStatus = CompletionStatus.PLANNED,
-            route = "selection"
+            name = "Chips & Selection",
+            description = "Interactive chips for actions, filtering, and user input",
+            icon = Icons.Default.Label,
+            componentCount = 12,
+            completionStatus = CompletionStatus.COMPLETED,
+            route = "selection",
+            components = listOf(
+                ComponentItem(
+                    id = "assist_chip",
+                    name = "Assist Chip",
+                    description = "Helper actions and contextual suggestions with optional icons",
+                    status = CompletionStatus.COMPLETED,
+                    route = "selection",
+                    complexity = ComponentComplexity.BASIC
+                ),
+                ComponentItem(
+                    id = "elevated_assist_chip",
+                    name = "Elevated Assist Chip",
+                    description = "Elevated assist chips for enhanced visual prominence",
+                    status = CompletionStatus.COMPLETED,
+                    route = "selection",
+                    complexity = ComponentComplexity.BASIC
+                ),
+                ComponentItem(
+                    id = "filter_chip",
+                    name = "Filter Chip",
+                    description = "Multi-select filtering with selection states and icons",
+                    status = CompletionStatus.COMPLETED,
+                    route = "selection",
+                    complexity = ComponentComplexity.INTERMEDIATE
+                ),
+                ComponentItem(
+                    id = "filter_chip_groups",
+                    name = "Filter Chip Groups",
+                    description = "Organized filter groups for complex filtering scenarios",
+                    status = CompletionStatus.COMPLETED,
+                    route = "selection",
+                    complexity = ComponentComplexity.INTERMEDIATE
+                ),
+                ComponentItem(
+                    id = "input_chip",
+                    name = "Input Chip",
+                    description = "User input representation with avatars and dismissal",
+                    status = CompletionStatus.COMPLETED,
+                    route = "selection",
+                    complexity = ComponentComplexity.INTERMEDIATE
+                ),
+                ComponentItem(
+                    id = "input_chip_avatars",
+                    name = "Input Chip with Avatars",
+                    description = "Contact chips with avatar representations and removal",
+                    status = CompletionStatus.COMPLETED,
+                    route = "selection",
+                    complexity = ComponentComplexity.INTERMEDIATE
+                ),
+                ComponentItem(
+                    id = "suggestion_chip",
+                    name = "Suggestion Chip",
+                    description = "Quick action recommendations and contextual suggestions",
+                    status = CompletionStatus.COMPLETED,
+                    route = "selection",
+                    complexity = ComponentComplexity.BASIC
+                ),
+                ComponentItem(
+                    id = "suggestion_chip_contextual",
+                    name = "Contextual Suggestions",
+                    description = "Smart suggestions based on location, time, and activity",
+                    status = CompletionStatus.COMPLETED,
+                    route = "selection",
+                    complexity = ComponentComplexity.ADVANCED
+                ),
+                ComponentItem(
+                    id = "chip_animations",
+                    name = "Animated Chips",
+                    description = "Smooth animations for chip state changes and interactions",
+                    status = CompletionStatus.COMPLETED,
+                    route = "selection",
+                    complexity = ComponentComplexity.INTERMEDIATE
+                ),
+                ComponentItem(
+                    id = "chip_groups",
+                    name = "Chip Groups",
+                    description = "Organization patterns for multiple chip collections",
+                    status = CompletionStatus.COMPLETED,
+                    route = "selection",
+                    complexity = ComponentComplexity.INTERMEDIATE
+                ),
+                ComponentItem(
+                    id = "tag_input_system",
+                    name = "Tag Input System",
+                    description = "Interactive tagging system with add/remove functionality",
+                    status = CompletionStatus.COMPLETED,
+                    route = "selection",
+                    complexity = ComponentComplexity.ADVANCED
+                ),
+                ComponentItem(
+                    id = "chip_accessibility",
+                    name = "Chip Accessibility",
+                    description = "Accessibility features and performance optimization patterns",
+                    status = CompletionStatus.COMPLETED,
+                    route = "selection",
+                    complexity = ComponentComplexity.ADVANCED
+                )
+            )
         ),
         
         ComponentCategory(
