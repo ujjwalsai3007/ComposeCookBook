@@ -7,7 +7,7 @@ An elegant collection of production-ready Material 3 components showcasing moder
 ## Features
 
 - **Complete Component Library** - 125+ Material 3 components across 8 categories
-- **Material 3 Expressive** - Latest design system with enhanced dynamic colors
+- **Material 3 Enhanced** - Custom expressive theming with vibrant colors and improved typography
 - **Production Ready** - Clean architecture with advanced state management
 - **Modern Navigation** - Type-safe routing with Compose Navigation
 - **Accessibility First** - WCAG compliant with inclusive design principles
@@ -28,7 +28,7 @@ An elegant collection of production-ready Material 3 components showcasing moder
 ## Technology Stack
 
 - **Jetpack Compose** - Modern declarative UI toolkit
-- **Material 3** - Latest design system with expressive theming
+- **Material 3** - Enhanced with custom expressive theming
 - **Kotlin** - 100% Kotlin implementation
 - **Navigation Compose** - Type-safe navigation architecture
 - **State Management** - Advanced Compose state patterns
@@ -80,7 +80,7 @@ fun YourScreen() {
 ## Highlights
 
 - **125+ Components** across 8 comprehensive categories
-- **Material 3 Expressive** design system implementation
+- **Material 3 Enhanced** with custom expressive theming
 - **Production-ready** code with clean architecture
 - **Professional workflow** demonstrated through structured Git branches
 - **Accessibility-first** approach with inclusive design principles
