@@ -156,17 +156,11 @@ Built with modern Android architecture patterns:
 - Min SDK 24 (Android 7.0)
 - Kotlin 1.9.0+
 
-## 🤝 Contributing
+## 📚 Reference Library
 
-We welcome contributions! Here's how you can help:
+This is a **comprehensive reference library** for Material 3 Compose development. All components are production-ready and copy-paste friendly for your projects.
 
-1. **Fork** the repository
-2. **Create** a feature branch (`git checkout -b feature/amazing-component`)
-3. **Commit** your changes (`git commit -m 'Add amazing component'`)
-4. **Push** to the branch (`git push origin feature/amazing-component`)
-5. **Open** a Pull Request
-
-Please read our [Contributing Guidelines](CONTRIBUTING.md) for more details.
+> **Note**: This repository serves as a curated reference collection. For questions or suggestions, please use the repository's discussion features.
 
 ## 📄 License
 
