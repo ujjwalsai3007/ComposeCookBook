@@ -506,7 +506,7 @@ object ComponentRegistry {
             id = "selection",
             name = "Chips & Selection",
             description = "Interactive chips for actions, filtering, and user input",
-            icon = Icons.Default.Label,
+            icon = Icons.Default.Star,
             componentCount = 12,
             completionStatus = CompletionStatus.COMPLETED,
             route = "selection",

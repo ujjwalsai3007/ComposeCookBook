@@ -1,5 +1,7 @@
 package com.example.androidui.ui.components
 
+import androidx.compose.foundation.clickable
+import androidx.compose.foundation.interaction.MutableInteractionSource
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
@@ -17,6 +19,7 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import com.example.androidui.ui.theme.ComposeCookbookTheme
+import kotlinx.coroutines.launch
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
@@ -239,7 +242,7 @@ private fun TopAppBarSection() {
                         DropdownMenuItem(
                             text = { Text("Help") },
                             onClick = { showMenu = false },
-                            leadingIcon = { Icon(Icons.Default.Help, contentDescription = null) }
+                            leadingIcon = { Icon(Icons.Default.Star, contentDescription = null) }
                         )
                         DropdownMenuItem(
                             text = { Text("About") },
@@ -331,7 +334,7 @@ private fun TopAppBarSection() {
                     ListItem(
                         headlineContent = { Text("Search result ${index + 1}") },
                         supportingContent = { Text("Matching component for '$searchText'") },
-                        leadingContent = { Icon(Icons.Default.History, contentDescription = null) },
+                        leadingContent = { Icon(Icons.Default.Star, contentDescription = null) },
                         modifier = Modifier.clickableNoRipple { 
                             searchText = "Search result ${index + 1}"
                             isSearchActive = false
@@ -716,9 +719,14 @@ private fun NavigationDrawerSection() {
 
     // Actual Modal Drawer (for demo)
     if (isDrawerOpen) {
+        val modalDrawerState = rememberDrawerState(DrawerValue.Open)
+        LaunchedEffect(modalDrawerState.isClosed) {
+            if (modalDrawerState.isClosed) {
+                isDrawerOpen = false
+            }
+        }
         ModalNavigationDrawer(
-            drawerState = rememberDrawerState(DrawerValue.Open),
-            onDismissRequest = { isDrawerOpen = false },
+            drawerState = modalDrawerState,
             drawerContent = {
                 ModalDrawerSheet(
                     drawerContainerColor = MaterialTheme.colorScheme.surface
@@ -781,7 +789,7 @@ private fun NavigationDrawerSection() {
                         modifier = Modifier.padding(horizontal = 12.dp, vertical = 2.dp)
                     )
                     NavigationDrawerItem(
-                        icon = { Icon(Icons.Default.Help, contentDescription = null) },
+                        icon = { Icon(Icons.Default.Star, contentDescription = null) },
                         label = { Text("Help & Feedback") },
                         selected = false,
                         onClick = { isDrawerOpen = false },
@@ -859,10 +867,10 @@ private val navItems = listOf(
 )
 
 private val tabItems = listOf(
-    TabItem("Photos", Icons.Default.Photo),
+    TabItem("Photos", Icons.Default.Star),
     TabItem("Videos", Icons.Default.PlayArrow),
-    TabItem("Music", Icons.Default.MusicNote),
-    TabItem("Files", Icons.Default.Folder)
+    TabItem("Music", Icons.Default.Star),
+    TabItem("Files", Icons.Default.Star)
 )
 
 private val longTabList = listOf(
@@ -871,13 +879,13 @@ private val longTabList = listOf(
 )
 
 private val drawerItems = listOf(
-    DrawerItem("Dashboard", Icons.Default.Dashboard),
-    DrawerItem("Projects", Icons.Default.Folder),
-    DrawerItem("Tasks", Icons.Default.Task),
-    DrawerItem("Calendar", Icons.Default.CalendarToday),
-    DrawerItem("Analytics", Icons.Default.Analytics),
-    DrawerItem("Team", Icons.Default.Group),
-    DrawerItem("Reports", Icons.Default.Assessment)
+    DrawerItem("Dashboard", Icons.Default.Star),
+    DrawerItem("Projects", Icons.Default.Star),
+    DrawerItem("Tasks", Icons.Default.Star),
+    DrawerItem("Calendar", Icons.Default.Star),
+    DrawerItem("Analytics", Icons.Default.Star),
+    DrawerItem("Team", Icons.Default.Star),
+    DrawerItem("Reports", Icons.Default.Star)
 )
 
 @Preview(showBackground = true, showSystemUi = true)

@@ -4,6 +4,7 @@ import androidx.compose.animation.animateColorAsState
 import androidx.compose.animation.core.Spring
 import androidx.compose.animation.core.spring
 import androidx.compose.foundation.background
+import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.LazyRow
@@ -125,7 +126,7 @@ private fun AssistChipSection() {
                     items(basicAssistChips) { chip ->
                         AssistChip(
                             onClick = { },
-                            label = { Text(chip.label) }
+                            label = { Text(chip) }
                         )
                     }
                 }
@@ -254,19 +255,19 @@ private fun AssistChipSection() {
                     )
                     
                     UseCaseExample(
-                        icon = Icons.Default.Place,
+                        icon = Icons.Default.Star,
                         title = "Location Services",
                         description = "Get directions, view on map, nearby places"
                     )
                     
                     UseCaseExample(
-                        icon = Icons.Default.Schedule,
+                        icon = Icons.Default.Info,
                         title = "Time-based Actions",
                         description = "Set reminder, schedule, view calendar"
                     )
                     
                     UseCaseExample(
-                        icon = Icons.Default.Contact,
+                        icon = Icons.Default.Person,
                         title = "Contact Actions",
                         description = "Call, message, email, add contact"
                     )
@@ -683,7 +684,7 @@ private fun InputChipSection() {
                     },
                     modifier = Modifier.fillMaxWidth()
                 ) {
-                    Icon(Icons.Default.PersonAdd, contentDescription = null)
+                    Icon(Icons.Default.Add, contentDescription = null)
                     Spacer(modifier = Modifier.width(8.dp))
                     Text("Add Contact")
                 }
@@ -961,7 +962,7 @@ private fun SuggestionChipSection() {
                                 label = { Text(search) },
                                 icon = {
                                     Icon(
-                                        Icons.Default.History,
+                                        Icons.Default.Info,
                                         contentDescription = null,
                                         modifier = Modifier.size(SuggestionChipDefaults.IconSize)
                                     )
@@ -1494,10 +1495,10 @@ data class Contact(
 )
 
 private val chipTabItems = listOf(
-    ChipTabItem("Assist", Icons.Default.Assistant),
-    ChipTabItem("Filter", Icons.Default.FilterList),
-    ChipTabItem("Input", Icons.Default.Input),
-    ChipTabItem("Suggestion", Icons.Default.Lightbulb),
+    ChipTabItem("Assist", Icons.Default.Info),
+    ChipTabItem("Filter", Icons.Default.Search),
+    ChipTabItem("Input", Icons.Default.Edit),
+    ChipTabItem("Suggestion", Icons.Default.Info),
     ChipTabItem("Advanced", Icons.Default.Settings)
 )
 
@@ -1506,24 +1507,24 @@ private val basicAssistChips = listOf(
 )
 
 private val iconAssistChips = listOf(
-    ChipItem("Get Directions", Icons.Default.Directions),
-    ChipItem("Call Now", Icons.Default.Phone),
+    ChipItem("Get Directions", Icons.Default.Star),
+    ChipItem("Call Now", Icons.Default.Star),
     ChipItem("Share", Icons.Default.Share),
-    ChipItem("Bookmark", Icons.Default.Bookmark)
+    ChipItem("Bookmark", Icons.Default.Star)
 )
 
 private val interactiveAssistChips = listOf(
-    ChipItem("Weather", Icons.Default.Cloud),
-    ChipItem("Traffic", Icons.Default.Traffic),
-    ChipItem("News", Icons.Default.Article),
-    ChipItem("Calendar", Icons.Default.Event)
+    ChipItem("Weather", Icons.Default.Star),
+    ChipItem("Traffic", Icons.Default.Star),
+    ChipItem("News", Icons.Default.Star),
+    ChipItem("Calendar", Icons.Default.Star)
 )
 
 private val elevatedAssistChips = listOf(
     ChipItem("Premium", Icons.Default.Star),
     ChipItem("Featured", Icons.Default.Favorite),
-    ChipItem("Trending", Icons.Default.TrendingUp),
-    ChipItem("New", Icons.Default.FiberNew)
+    ChipItem("Trending", Icons.Default.Star),
+    ChipItem("New", Icons.Default.Star)
 )
 
 private val contentFilters = listOf(
@@ -1531,11 +1532,11 @@ private val contentFilters = listOf(
 )
 
 private val categoryFilters = listOf(
-    ChipItem("Electronics", Icons.Default.Devices),
-    ChipItem("Fashion", Icons.Default.Checkroom),
+    ChipItem("Electronics", Icons.Default.Star),
+    ChipItem("Fashion", Icons.Default.Star),
     ChipItem("Home", Icons.Default.Home),
-    ChipItem("Sports", Icons.Default.SportsBaseball),
-    ChipItem("Books", Icons.Default.MenuBook)
+    ChipItem("Sports", Icons.Default.Star),
+    ChipItem("Books", Icons.Default.Menu)
 )
 
 private val priceRangeFilters = listOf(
@@ -1570,27 +1571,27 @@ private val basicSuggestions = listOf(
 
 private val sampleQuickActions = listOf(
     ChipItem("Settings", Icons.Default.Settings),
-    ChipItem("Help", Icons.Default.Help),
-    ChipItem("Feedback", Icons.Default.Feedback),
+    ChipItem("Help", Icons.Default.Info),
+    ChipItem("Feedback", Icons.Default.Email),
     ChipItem("About", Icons.Default.Info)
 )
 
 private val locationSuggestions = listOf(
-    ChipItem("Nearby Restaurants", Icons.Default.Restaurant),
-    ChipItem("Gas Stations", Icons.Default.LocalGasStation),
-    ChipItem("ATMs", Icons.Default.LocalAtm)
+    ChipItem("Nearby Restaurants", Icons.Default.Star),
+    ChipItem("Gas Stations", Icons.Default.Star),
+    ChipItem("ATMs", Icons.Default.Star)
 )
 
 private val timeSuggestions = listOf(
-    ChipItem("Morning Routine", Icons.Default.WbSunny),
-    ChipItem("Lunch Break", Icons.Default.LunchDining),
-    ChipItem("Evening Plans", Icons.Default.NightLight)
+    ChipItem("Morning Routine", Icons.Default.Star),
+    ChipItem("Lunch Break", Icons.Default.Star),
+    ChipItem("Evening Plans", Icons.Default.Star)
 )
 
 private val activitySuggestions = listOf(
-    ChipItem("Continue Reading", Icons.Default.MenuBook),
-    ChipItem("Resume Workout", Icons.Default.FitnessCenter),
-    ChipItem("Check Messages", Icons.Default.Message)
+    ChipItem("Continue Reading", Icons.Default.Menu),
+    ChipItem("Resume Workout", Icons.Default.Star),
+    ChipItem("Check Messages", Icons.Default.Star)
 )
 
 private val animatedChipExamples = listOf(

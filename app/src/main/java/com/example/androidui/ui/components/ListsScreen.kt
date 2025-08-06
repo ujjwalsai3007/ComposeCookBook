@@ -331,7 +331,7 @@ private fun LazyGridSection(searchText: String) {
                     modifier = Modifier.fillMaxSize(),
                     contentPadding = PaddingValues(16.dp),
                     horizontalArrangement = Arrangement.spacedBy(8.dp),
-                    verticalArrangement = Arrangement.spacedBy(8.dp)
+                    verticalItemSpacing = 8.dp
                 ) {
                     items(filteredItems, key = { it.id }) { item ->
                         ProductCard(
@@ -374,7 +374,7 @@ private fun LazyRowSection() {
                             label = { Text(category) },
                             leadingIcon = {
                                 Icon(
-                                    Icons.Default.Category,
+                                    Icons.Default.Star,
                                     contentDescription = null,
                                     modifier = Modifier.size(18.dp)
                                 )
@@ -508,7 +508,7 @@ private fun ListItemSection() {
                     HorizontalDivider()
                     ListItem(
                         headlineContent = { Text("With trailing icon") },
-                        trailingContent = { Icon(Icons.Default.ChevronRight, contentDescription = null) }
+                        trailingContent = { Icon(Icons.Default.KeyboardArrowRight, contentDescription = null) }
                     )
                 }
             }
@@ -705,7 +705,7 @@ private fun InteractiveSection() {
                                         fontWeight = FontWeight.Medium
                                     )
                                     Icon(
-                                        imageVector = if (isExpanded) Icons.Default.ExpandLess else Icons.Default.ExpandMore,
+                                        imageVector = if (isExpanded) Icons.Default.Star else Icons.Default.Star,
                                         contentDescription = if (isExpanded) "Collapse" else "Expand"
                                     )
                                 }
@@ -1030,18 +1030,18 @@ data class SampleItem(
     val color: Color
 )
 
-data class TabItem(
+data class ListTabItem(
     val title: String,
     val icon: ImageVector
 )
 
 private val listTabItems = listOf(
-    TabItem("LazyColumn", Icons.Default.ViewList),
-    TabItem("LazyGrid", Icons.Default.GridView),
-    TabItem("LazyRow", Icons.Default.ViewCarousel),
-    TabItem("ListItem", Icons.Default.List),
-    TabItem("Interactive", Icons.Default.TouchApp),
-    TabItem("Performance", Icons.Default.Speed)
+    ListTabItem("LazyColumn", Icons.Default.List),
+    ListTabItem("LazyGrid", Icons.Default.Star),
+    ListTabItem("LazyRow", Icons.Default.Star),
+    ListTabItem("ListItem", Icons.Default.List),
+    ListTabItem("Interactive", Icons.Default.Star),
+    ListTabItem("Performance", Icons.Default.Star)
 )
 
 private val categories = listOf(

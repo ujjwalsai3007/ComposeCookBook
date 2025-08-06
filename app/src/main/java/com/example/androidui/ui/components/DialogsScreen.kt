@@ -3,6 +3,7 @@ package com.example.androidui.ui.components
 import androidx.compose.animation.core.Spring
 import androidx.compose.animation.core.spring
 import androidx.compose.foundation.background
+import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
@@ -189,25 +190,43 @@ fun DialogsScreen() {
     // Time Picker
     if (showTimePicker) {
         val timePickerState = rememberTimePickerState()
-        TimePickerDialog(
-            onDismissRequest = { showTimePicker = false },
-            confirmButton = {
-                TextButton(
-                    onClick = {
-                        selectedTime = "Time: ${String.format("%02d:%02d", timePickerState.hour, timePickerState.minute)}"
-                        showTimePicker = false
-                    }
+        Dialog(
+            onDismissRequest = { showTimePicker = false }
+        ) {
+            Card(
+                modifier = Modifier.fillMaxWidth(),
+                shape = RoundedCornerShape(16.dp)
+            ) {
+                Column(
+                    modifier = Modifier.padding(16.dp),
+                    horizontalAlignment = Alignment.CenterHorizontally
                 ) {
-                    Text("OK")
-                }
-            },
-            dismissButton = {
-                TextButton(onClick = { showTimePicker = false }) {
-                    Text("Cancel")
+                    Text(
+                        text = "Select Time",
+                        style = MaterialTheme.typography.headlineSmall,
+                        modifier = Modifier.padding(bottom = 16.dp)
+                    )
+                    TimePicker(state = timePickerState)
+                    Row(
+                        modifier = Modifier
+                            .fillMaxWidth()
+                            .padding(top = 16.dp),
+                        horizontalArrangement = Arrangement.End
+                    ) {
+                        TextButton(onClick = { showTimePicker = false }) {
+                            Text("Cancel")
+                        }
+                        TextButton(
+                            onClick = {
+                                selectedTime = "Time: ${String.format("%02d:%02d", timePickerState.hour, timePickerState.minute)}"
+                                showTimePicker = false
+                            }
+                        ) {
+                            Text("OK")
+                        }
+                    }
                 }
             }
-        ) {
-            TimePicker(state = timePickerState)
         }
     }
     
@@ -286,7 +305,7 @@ private fun AlertDialogSection(
                     onClick = onShowConfirm,
                     modifier = Modifier.fillMaxWidth()
                 ) {
-                    Icon(Icons.Default.QuestionMark, contentDescription = null)
+                    Icon(Icons.Default.Star, contentDescription = null)
                     Spacer(modifier = Modifier.width(8.dp))
                     Text("Show Confirmation Dialog")
                 }
@@ -308,7 +327,7 @@ private fun AlertDialogSection(
                         containerColor = MaterialTheme.colorScheme.error
                     )
                 ) {
-                    Icon(Icons.Default.DeleteForever, contentDescription = null)
+                    Icon(Icons.Default.Star, contentDescription = null)
                     Spacer(modifier = Modifier.width(8.dp))
                     Text("Show Destructive Dialog")
                 }
@@ -330,7 +349,7 @@ private fun AlertDialogSection(
                         containerColor = MaterialTheme.colorScheme.tertiary
                     )
                 ) {
-                    Icon(Icons.Default.Palette, contentDescription = null)
+                    Icon(Icons.Default.Star, contentDescription = null)
                     Spacer(modifier = Modifier.width(8.dp))
                     Text("Show Custom Dialog")
                 }
@@ -352,7 +371,7 @@ private fun AlertDialogSection(
                         containerColor = MaterialTheme.colorScheme.secondary
                     )
                 ) {
-                    Icon(Icons.Default.Fullscreen, contentDescription = null)
+                    Icon(Icons.Default.Star, contentDescription = null)
                     Spacer(modifier = Modifier.width(8.dp))
                     Text("Show Full-Screen Dialog")
                 }
@@ -422,7 +441,7 @@ private fun BottomSheetSection(
                     )
                     
                     BottomSheetExample(
-                        icon = Icons.Default.FilterList,
+                        icon = Icons.Default.Star,
                         title = "Filter Options",
                         description = "Advanced filtering and sorting"
                     )
@@ -517,7 +536,7 @@ private fun PickerDialogSection(
                         onClick = onShowDatePicker,
                         modifier = Modifier.fillMaxWidth()
                     ) {
-                        Icon(Icons.Default.CalendarToday, contentDescription = null)
+                        Icon(Icons.Default.Star, contentDescription = null)
                         Spacer(modifier = Modifier.width(8.dp))
                         Text("Pick Date")
                     }
@@ -563,7 +582,7 @@ private fun PickerDialogSection(
                         onClick = onShowTimePicker,
                         modifier = Modifier.fillMaxWidth()
                     ) {
-                        Icon(Icons.Default.Schedule, contentDescription = null)
+                        Icon(Icons.Default.Star, contentDescription = null)
                         Spacer(modifier = Modifier.width(8.dp))
                         Text("Pick Time")
                     }
@@ -583,13 +602,13 @@ private fun PickerDialogSection(
                     )
                     
                     CustomPickerExample(
-                        icon = Icons.Default.DateRange,
+                        icon = Icons.Default.Star,
                         title = "Date Range Picker",
                         description = "Select start and end dates for periods"
                     )
                     
                     CustomPickerExample(
-                        icon = Icons.Default.ColorLens,
+                        icon = Icons.Default.Star,
                         title = "Color Picker",
                         description = "HSV color wheel and RGB input"
                     )
@@ -601,7 +620,7 @@ private fun PickerDialogSection(
                     )
                     
                     CustomPickerExample(
-                        icon = Icons.Default.AttachMoney,
+                        icon = Icons.Default.Star,
                         title = "Currency Picker",
                         description = "Currency selection with flags"
                     )
@@ -667,7 +686,7 @@ private fun ContextualOverlaySection() {
                             DropdownMenuItem(
                                 text = { Text("Copy") },
                                 onClick = { showDropdownMenu = false },
-                                leadingIcon = { Icon(Icons.Default.ContentCopy, contentDescription = null) }
+                                leadingIcon = { Icon(Icons.Default.Star, contentDescription = null) }
                             )
                             HorizontalDivider()
                             DropdownMenuItem(
@@ -697,23 +716,13 @@ private fun ContextualOverlaySection() {
                         modifier = Modifier.padding(bottom = 12.dp)
                     )
                     
-                    TooltipBox(
-                        positionProvider = TooltipDefaults.rememberPlainTooltipPositionProvider(),
-                        tooltip = {
-                            PlainTooltip {
-                                Text("This is a helpful tooltip that explains the button's function")
-                            }
-                        },
-                        state = rememberTooltipState()
+                    Button(
+                        onClick = { },
+                        modifier = Modifier.fillMaxWidth()
                     ) {
-                        Button(
-                            onClick = { },
-                            modifier = Modifier.fillMaxWidth()
-                        ) {
-                            Icon(Icons.Default.Help, contentDescription = null)
-                            Spacer(modifier = Modifier.width(8.dp))
-                            Text("Hover or Long Press for Tooltip")
-                        }
+                        Icon(Icons.Default.Star, contentDescription = null)
+                        Spacer(modifier = Modifier.width(8.dp))
+                        Text("Button with Tooltip (Simplified)")
                     }
                 }
             }
@@ -729,33 +738,16 @@ private fun ContextualOverlaySection() {
                         modifier = Modifier.padding(bottom = 12.dp)
                     )
                     
-                    TooltipBox(
-                        positionProvider = TooltipDefaults.rememberRichTooltipPositionProvider(),
-                        tooltip = {
-                            RichTooltip(
-                                title = { Text("Rich Tooltip") },
-                                action = {
-                                    TextButton(onClick = { }) {
-                                        Text("Learn More")
-                                    }
-                                }
-                            ) {
-                                Text("This tooltip contains a title, body text, and an action button for enhanced functionality.")
-                            }
-                        },
-                        state = rememberTooltipState()
+                    Button(
+                        onClick = { },
+                        modifier = Modifier.fillMaxWidth(),
+                        colors = ButtonDefaults.buttonColors(
+                            containerColor = MaterialTheme.colorScheme.secondary
+                        )
                     ) {
-                        Button(
-                            onClick = { },
-                            modifier = Modifier.fillMaxWidth(),
-                            colors = ButtonDefaults.buttonColors(
-                                containerColor = MaterialTheme.colorScheme.secondary
-                            )
-                        ) {
-                            Icon(Icons.Default.Info, contentDescription = null)
-                            Spacer(modifier = Modifier.width(8.dp))
-                            Text("Rich Tooltip Example")
-                        }
+                        Icon(Icons.Default.Info, contentDescription = null)
+                        Spacer(modifier = Modifier.width(8.dp))
+                        Text("Rich Tooltip (Simplified)")
                     }
                 }
             }
@@ -855,7 +847,7 @@ private fun AdvancedPatternsSection(
                         containerColor = MaterialTheme.colorScheme.error
                     )
                 ) {
-                    Icon(Icons.Default.Error, contentDescription = null)
+                    Icon(Icons.Default.Star, contentDescription = null)
                     Spacer(modifier = Modifier.width(8.dp))
                     Text("Show Error Dialog")
                 }
@@ -902,19 +894,19 @@ private fun AdvancedPatternsSection(
                     )
                     
                     MultiStepFlowExample(
-                        icon = Icons.Default.Payment,
+                        icon = Icons.Default.Star,
                         title = "Checkout Process",
                         description = "Payment and shipping confirmation"
                     )
                     
                     MultiStepFlowExample(
-                        icon = Icons.Default.CloudUpload,
+                        icon = Icons.Default.Star,
                         title = "File Upload",
                         description = "Upload progress and confirmation"
                     )
                     
                     MultiStepFlowExample(
-                        icon = Icons.Default.Security,
+                        icon = Icons.Default.Star,
                         title = "Permission Request",
                         description = "Progressive permission explanation"
                     )
@@ -1212,10 +1204,10 @@ private fun BottomSheetContent() {
         )
         
         val shareOptions = listOf(
-            ShareOption("Message", Icons.Default.Message),
+            ShareOption("Message", Icons.Default.Star),
             ShareOption("Email", Icons.Default.Email),
-            ShareOption("Copy Link", Icons.Default.Link),
-            ShareOption("More", Icons.Default.MoreHoriz)
+            ShareOption("Copy Link", Icons.Default.Star),
+            ShareOption("More", Icons.Default.Star)
         )
         
         shareOptions.forEach { option ->
@@ -1296,7 +1288,7 @@ private fun ErrorDialog(onDismiss: () -> Unit) {
         onDismissRequest = onDismiss,
         icon = { 
             Icon(
-                Icons.Default.Error, 
+                Icons.Default.Star, 
                 contentDescription = null, 
                 tint = MaterialTheme.colorScheme.error,
                 modifier = Modifier.size(32.dp)
@@ -1530,7 +1522,7 @@ data class ShareOption(
 private val dialogTabItems = listOf(
     DialogTabItem("Alert Dialogs", Icons.Default.Notifications),
     DialogTabItem("Bottom Sheets", Icons.Default.KeyboardArrowUp),
-    DialogTabItem("Pickers", Icons.Default.CalendarToday),
+    DialogTabItem("Pickers", Icons.Default.Star),
     DialogTabItem("Contextual", Icons.Default.MoreVert),
     DialogTabItem("Advanced", Icons.Default.Settings)
 )
