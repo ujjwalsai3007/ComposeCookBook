@@ -11,17 +11,7 @@
 
 A comprehensive collection of **125+ production-ready Material 3 components** showcasing modern Android UI development with **Material 3 Enhanced** theming, accessibility, and performance optimization.
 
-## 📱 Screenshots
 
-> **Note**: Add screenshots of your app here! Run the app, take screenshots of different component screens, and add them here to make your repo more visually appealing.
-
-```bash
-# To add screenshots:
-# 1. Run the app on your device/emulator
-# 2. Take screenshots of the component catalog
-# 3. Create a screenshots/ folder in your repo
-# 4. Add images here with: ![Screenshot](screenshots/components.png)
-```
 
 ## ✨ Why Compose Cookbook?
 
