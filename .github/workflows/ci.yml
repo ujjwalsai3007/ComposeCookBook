@@ -1,0 +1,150 @@
+name: CI/CD Pipeline
+
+on:
+  push:
+    branches: [ main, develop ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  lint-and-test:
+    name: 🔍 Code Quality & Testing
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: 📥 Checkout Repository
+      uses: actions/checkout@v4
+      
+    - name: ☕ Set up JDK 11
+      uses: actions/setup-java@v4
+      with:
+        java-version: '11'
+        distribution: 'temurin'
+        
+    - name: 📦 Cache Gradle packages
+      uses: actions/cache@v4
+      with:
+        path: |
+          ~/.gradle/caches
+          ~/.gradle/wrapper
+        key: ${{ runner.os }}-gradle-${{ hashFiles('**/*.gradle*', '**/gradle-wrapper.properties') }}
+        restore-keys: |
+          ${{ runner.os }}-gradle-
+          
+    - name: 🔧 Grant execute permission for gradlew
+      run: chmod +x gradlew
+      
+    - name: 🧹 Run Lint
+      run: ./gradlew lintDebug
+      
+    - name: 🧪 Run Unit Tests
+      run: ./gradlew testDebugUnitTest
+      
+    - name: 🔨 Build Debug APK
+      run: ./gradlew assembleDebug
+      
+    - name: 📊 Upload Lint Results
+      uses: actions/upload-artifact@v4
+      if: always()
+      with:
+        name: lint-results
+        path: app/build/reports/lint-results-debug.html
+        
+    - name: 📈 Upload Test Results
+      uses: actions/upload-artifact@v4
+      if: always()
+      with:
+        name: test-results
+        path: app/build/reports/tests/testDebugUnitTest/
+        
+    - name: 📱 Upload Debug APK
+      uses: actions/upload-artifact@v4
+      with:
+        name: debug-apk
+        path: app/build/outputs/apk/debug/app-debug.apk
+
+  security-scan:
+    name: 🔒 Security Scan
+    runs-on: ubuntu-latest
+    needs: lint-and-test
+    
+    steps:
+    - name: 📥 Checkout Repository
+      uses: actions/checkout@v4
+      
+    - name: 🛡️ Run CodeQL Analysis
+      uses: github/codeql-action/init@v3
+      with:
+        languages: kotlin
+        
+    - name: ☕ Set up JDK 11
+      uses: actions/setup-java@v4
+      with:
+        java-version: '11'
+        distribution: 'temurin'
+        
+    - name: 🔧 Grant execute permission for gradlew
+      run: chmod +x gradlew
+      
+    - name: 🔨 Build for Analysis
+      run: ./gradlew assembleDebug
+      
+    - name: 🔍 Perform CodeQL Analysis
+      uses: github/codeql-action/analyze@v3
+
+  dependency-check:
+    name: 🔍 Dependency Vulnerability Scan
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: 📥 Checkout Repository
+      uses: actions/checkout@v4
+      
+    - name: ☕ Set up JDK 11
+      uses: actions/setup-java@v4
+      with:
+        java-version: '11'
+        distribution: 'temurin'
+        
+    - name: 🔧 Grant execute permission for gradlew
+      run: chmod +x gradlew
+      
+    - name: 📦 Cache Gradle packages
+      uses: actions/cache@v4
+      with:
+        path: |
+          ~/.gradle/caches
+          ~/.gradle/wrapper
+        key: ${{ runner.os }}-gradle-${{ hashFiles('**/*.gradle*', '**/gradle-wrapper.properties') }}
+        restore-keys: |
+          ${{ runner.os }}-gradle-
+          
+    - name: 🔍 Check Dependencies
+      run: ./gradlew dependencies
+      
+    - name: 📊 Generate Dependency Report
+      run: ./gradlew dependencyUpdates
+
+  build-status:
+    name: ✅ Build Status
+    runs-on: ubuntu-latest
+    needs: [lint-and-test, security-scan, dependency-check]
+    if: always()
+    
+    steps:
+    - name: 🎉 Success Notification
+      if: ${{ needs.lint-and-test.result == 'success' && needs.security-scan.result == 'success' && needs.dependency-check.result == 'success' }}
+      run: |
+        echo "🎉 All checks passed! Repository is ready for production."
+        echo "✅ Lint: Passed"
+        echo "✅ Tests: Passed" 
+        echo "✅ Security: Passed"
+        echo "✅ Dependencies: Checked"
+        
+    - name: ❌ Failure Notification
+      if: ${{ needs.lint-and-test.result == 'failure' || needs.security-scan.result == 'failure' || needs.dependency-check.result == 'failure' }}
+      run: |
+        echo "❌ Some checks failed. Please review the results."
+        echo "Lint: ${{ needs.lint-and-test.result }}"
+        echo "Security: ${{ needs.security-scan.result }}"
+        echo "Dependencies: ${{ needs.dependency-check.result }}"
