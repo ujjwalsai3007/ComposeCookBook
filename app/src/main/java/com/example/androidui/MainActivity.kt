@@ -20,7 +20,7 @@ import com.example.androidui.ui.theme.ComposeCookbookTheme
  * - Navigation between component categories  
  * - Copy-paste ready code examples
  * - Dark/Light theme support
- * - Material 3 Expressive design system
+ * - Material 3 Enhanced design system
  */
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {

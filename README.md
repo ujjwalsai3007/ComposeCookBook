@@ -8,7 +8,7 @@
 
 > **The definitive Material 3 component library for Jetpack Compose developers**
 
-A comprehensive collection of **125+ production-ready Material 3 components** showcasing modern Android UI development with enhanced theming, accessibility, and performance optimization.
+A comprehensive collection of **125+ production-ready Material 3 components** showcasing modern Android UI development with **Material 3 Enhanced** theming, accessibility, and performance optimization.
 
 ## ✨ Why Compose Cookbook?
 
@@ -47,7 +47,7 @@ Open in Android Studio and run the project. Browse components by category and co
 ## 🛠️ Technology Stack
 
 - **Jetpack Compose** - Modern declarative UI toolkit
-- **Material 3** - Enhanced with custom expressive theming
+- **Material 3 Enhanced** - Custom implementation inspired by expressive design principles
 - **Kotlin** - 100% Kotlin implementation
 - **Navigation Compose** - Type-safe navigation architecture
 - **State Management** - Advanced Compose state patterns

@@ -3,26 +3,26 @@ package com.example.androidui.ui.theme
 import androidx.compose.ui.graphics.Color
 
 /**
- * Compose Cookbook - Material 3 Expressive (May 2025) Color Palette
+ * Compose Cookbook - Material 3 Enhanced Color Palette
  * 
- * Updated to use Google's latest Material 3 Expressive design system.
+ * Custom Material 3 theming inspired by Google's Material 3 Expressive principles.
  * Features enhanced vibrancy, improved contrast ratios, and emotional resonance
- * based on Google's research showing 4x faster UI element recognition.
+ * for better user engagement and accessibility.
  * 
- * Key Material 3 Expressive principles:
- * - More vibrant dynamic theming engine
+ * Key Enhanced Material 3 principles:
+ * - Vibrant, expressive color combinations
  * - Enhanced contrast for better accessibility  
  * - Emotional color connections for user engagement
  * - Optimized for both light and dark modes
  */
 
-// Primary Colors - Enhanced Electric Blue (M3 Expressive)
+// Primary Colors - Enhanced Electric Blue (M3 Enhanced)
 val Primary80 = Color(0xFF5FB3F5)     // More vibrant light container
 val Primary40 = Color(0xFF1565C0)     // Deeper, more expressive primary
 val Primary20 = Color(0xFF0A47A1)     // Richer dark mode primary
 val Primary90 = Color(0xFFE1F4FE)     // Softer, more expressive container
 
-// Secondary Colors - Bold Energetic Orange (M3 Expressive)
+// Secondary Colors - Bold Energetic Orange (M3 Enhanced)
 val Secondary80 = Color(0xFFFFAB40)   // More vibrant orange container
 val Secondary40 = Color(0xFFF57C00)   // Warmer, more emotional orange
 val Secondary20 = Color(0xFFE65100)   // Deep amber for dark mode

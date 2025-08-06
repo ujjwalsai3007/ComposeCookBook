@@ -17,21 +17,21 @@ import androidx.compose.ui.platform.LocalView
 import androidx.core.view.WindowCompat
 
 /**
- * Compose Cookbook - Material 3 Expressive Theme (May 2025)
+ * Compose Cookbook - Material 3 Enhanced Theme
  * 
- * Updated to Google's latest Material 3 Expressive design system featuring:
+ * Custom Material 3 theming inspired by expressive design principles:
  * - Enhanced dynamic color engine with improved vibrancy
- * - Better contrast ratios for 4x faster UI element recognition  
+ * - Better contrast ratios for improved UI element recognition  
  * - Emotional design connections for user engagement
- * - Springy animations and natural motion physics
+ * - Modern theming patterns and best practices
  * - Surface tinting and improved depth perception
  * 
- * This theme showcases the full expressive potential of the latest
- * Material 3 design system with cutting-edge 2025 features.
+ * This theme showcases enhanced Material 3 theming capabilities
+ * with modern design principles and accessibility improvements.
  */
 
 private val LightColorScheme = lightColorScheme(
-    // Primary colors - Enhanced M3 Expressive vibrancy
+    // Primary colors - Enhanced M3 vibrancy
     primary = Primary40,
     onPrimary = Color.White,
     primaryContainer = Primary80,
@@ -65,7 +65,7 @@ private val LightColorScheme = lightColorScheme(
     surfaceVariant = SurfaceVariant,
     onSurfaceVariant = Color(0xFF49454E),
     
-    // Outline - Improved contrast for M3 Expressive
+    // Outline - Improved contrast for M3 Enhanced
     outline = Outline,
     outlineVariant = OutlineVariant,
     
@@ -74,12 +74,12 @@ private val LightColorScheme = lightColorScheme(
     inverseOnSurface = Color(0xFFF1F0F4),
     inversePrimary = Primary80,
     
-    // Surface tint - New M3 Expressive feature
+    // Surface tint - Enhanced M3 feature
     surfaceTint = Primary40,
 )
 
 private val DarkColorScheme = darkColorScheme(
-    // Primary colors - M3 Expressive enhanced dark mode
+    // Primary colors - M3 Enhanced dark mode
     primary = Primary80,
     onPrimary = Primary20,
     primaryContainer = Primary20,
@@ -129,8 +129,8 @@ private val DarkColorScheme = darkColorScheme(
 @Composable
 fun ComposeCookbookTheme(
     darkTheme: Boolean = isSystemInDarkTheme(),
-    // M3 Expressive: Enhanced dynamic color engine
-    // Set to false to showcase our custom expressive colors
+    // M3 Enhanced: Dynamic color engine
+    // Set to false to showcase our custom enhanced colors
     dynamicColor: Boolean = false,
     content: @Composable () -> Unit
 ) {
@@ -147,7 +147,7 @@ fun ComposeCookbookTheme(
     if (!view.isInEditMode) {
         SideEffect {
             val window = (view.context as Activity).window
-            // M3 Expressive: Enhanced system bar styling
+            // M3 Enhanced: Enhanced system bar styling
             window.statusBarColor = colorScheme.surface.toArgb()
             window.navigationBarColor = colorScheme.surface.toArgb()
             WindowCompat.getInsetsController(window, view).isAppearanceLightStatusBars = !darkTheme
@@ -158,7 +158,7 @@ fun ComposeCookbookTheme(
     MaterialTheme(
         colorScheme = colorScheme,
         typography = Typography,
-        // M3 Expressive: Future shapes and animation curves can be added here
+        // M3 Enhanced: Future shapes and animation curves can be added here
         content = content
     )
 }

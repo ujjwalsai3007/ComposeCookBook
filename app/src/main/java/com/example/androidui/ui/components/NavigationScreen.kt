@@ -48,7 +48,7 @@ fun NavigationScreen() {
 
         item {
             Text(
-                text = "Material 3 Expressive navigation patterns for seamless user journeys",
+                text = "Material 3 Enhanced navigation patterns for seamless user journeys",
                 style = MaterialTheme.typography.bodyLarge,
                 color = MaterialTheme.colorScheme.onSurfaceVariant
             )

@@ -50,7 +50,7 @@ fun ButtonsScreen(modifier: Modifier = Modifier) {
         )
         
         Text(
-            text = "Explore the complete range of Material 3 button components with expressive styling",
+            text = "Explore the complete range of Material 3 button components with enhanced styling",
             style = MaterialTheme.typography.bodyLarge,
             color = MaterialTheme.colorScheme.onSurfaceVariant
         )
