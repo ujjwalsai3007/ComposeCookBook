@@ -1,5 +1,6 @@
 # 📱 Compose Cookbook
 
+[![GitHub stars](https://img.shields.io/github/stars/ujjwalsai3007/ComposeCookBook?style=social)](https://github.com/ujjwalsai3007/ComposeCookBook/stargazers)
 [![API](https://img.shields.io/badge/API-24%2B-brightgreen.svg?style=flat)](https://android-arsenal.com/api?level=24)
 [![Kotlin](https://img.shields.io/badge/kotlin-2.0.21-blue.svg?logo=kotlin)](http://kotlinlang.org)
 [![Jetpack Compose](https://img.shields.io/badge/Jetpack%20Compose-2024.09.00-blue)](https://developer.android.com/jetpack/compose)
@@ -9,6 +10,18 @@
 > **The definitive Material 3 component library for Jetpack Compose developers**
 
 A comprehensive collection of **125+ production-ready Material 3 components** showcasing modern Android UI development with **Material 3 Enhanced** theming, accessibility, and performance optimization.
+
+## 📱 Screenshots
+
+> **Note**: Add screenshots of your app here! Run the app, take screenshots of different component screens, and add them here to make your repo more visually appealing.
+
+```bash
+# To add screenshots:
+# 1. Run the app on your device/emulator
+# 2. Take screenshots of the component catalog
+# 3. Create a screenshots/ folder in your repo
+# 4. Add images here with: ![Screenshot](screenshots/components.png)
+```
 
 ## ✨ Why Compose Cookbook?
 
