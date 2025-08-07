@@ -454,7 +454,7 @@ private fun DateTimeShowcase() {
                 verticalArrangement = Arrangement.spacedBy(4.dp)
             ) {
                 Text(
-                    text = "📅 Date & Time Pickers",
+                    text = "Date & Time Pickers",
                     style = MaterialTheme.typography.titleSmall,
                     fontWeight = FontWeight.SemiBold
                 )

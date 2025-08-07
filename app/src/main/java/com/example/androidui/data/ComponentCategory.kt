@@ -39,9 +39,9 @@ data class ComponentItem(
 )
 
 enum class CompletionStatus {
-    COMPLETED,      // ✅ Fully implemented
+    COMPLETED,      // Fully implemented
     IN_PROGRESS,    // 🚧 Currently working on
-    PLANNED,        // 📋 Scheduled for development
+    PLANNED,        // Scheduled for development
     EXPERIMENTAL    // 🧪 Testing new features
 }
 

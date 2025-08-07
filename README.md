@@ -1,4 +1,4 @@
-# 📱 Compose Cookbook
+# Compose Cookbook
 
 [![GitHub stars](https://img.shields.io/github/stars/ujjwalsai3007/ComposeCookBook?style=social)](https://github.com/ujjwalsai3007/ComposeCookBook/stargazers)
 [![API](https://img.shields.io/badge/API-24%2B-brightgreen.svg?style=flat)](https://android-arsenal.com/api?level=24)
@@ -13,17 +13,17 @@ A comprehensive collection of **125+ production-ready Material 3 components** sh
 
 
 
-## ✨ Why Compose Cookbook?
+## Why Compose Cookbook?
 
 **Tired of searching for Material 3 component examples?** This repository solves that problem by providing:
 
-- 🎯 **Copy-paste ready components** - No more reinventing the wheel
-- 📚 **Complete component coverage** - Every Material 3 component in one place  
-- 🎨 **Enhanced theming** - Beautiful custom Material 3 implementation
-- ⚡ **Performance optimized** - Lazy loading, state management, and best practices
-- 🌐 **Accessibility first** - WCAG compliant with inclusive design
+- **Copy-paste ready components** - No more reinventing the wheel
+- **Complete component coverage** - Every Material 3 component in one place  
+- **Enhanced theming** - Beautiful custom Material 3 implementation
+- **Performance optimized** - Lazy loading, state management, and best practices
+- **Accessibility first** - WCAG compliant with inclusive design
 
-## 🚀 Quick Start
+## Quick Start
 
 ```bash
 git clone https://github.com/ujjwalsai3007/ComposeCookBook.git
@@ -32,22 +32,22 @@ cd ComposeCookBook
 
 Open in Android Studio and run the project. Browse components by category and copy the code you need!
 
-## 📋 Component Library
+## Component Library
 
 | Category | Components | Key Examples |
 |----------|------------|--------------|
-| **🔴 Buttons & Actions** | 5 | `FilledButton`, `OutlinedButton`, `FloatingActionButton` |
-| **🏠 Cards & Surfaces** | 8 | `ElevatedCard`, `OutlinedCard`, `InteractiveCard` |
-| **🎯 Navigation** | 10 | `NavigationBar`, `NavigationRail`, `TopAppBar` |
-| **📝 Input & Forms** | 15 | `TextField`, `DatePicker`, `Checkbox`, `Slider` |
-| **📊 Progress & Feedback** | 12 | `CircularProgressIndicator`, `SnackBar`, `Badge` |
-| **🏷️ Chips & Selection** | 12 | `AssistChip`, `FilterChip`, `InputChip` |
-| **📋 Lists & Data Display** | 12 | `LazyColumn`, `LazyGrid`, `Pull-to-refresh` |
-| **💬 Dialogs & Overlays** | 15 | `AlertDialog`, `BottomSheet`, `Tooltip` |
+| **Buttons & Actions** | 5 | `FilledButton`, `OutlinedButton`, `FloatingActionButton` |
+| **Cards & Surfaces** | 8 | `ElevatedCard`, `OutlinedCard`, `InteractiveCard` |
+| **Navigation** | 10 | `NavigationBar`, `NavigationRail`, `TopAppBar` |
+| **Input & Forms** | 15 | `TextField`, `DatePicker`, `Checkbox`, `Slider` |
+| **Progress & Feedback** | 12 | `CircularProgressIndicator`, `SnackBar`, `Badge` |
+| **Chips & Selection** | 12 | `AssistChip`, `FilterChip`, `InputChip` |
+| **Lists & Data Display** | 12 | `LazyColumn`, `LazyGrid`, `Pull-to-refresh` |
+| **Dialogs & Overlays** | 15 | `AlertDialog`, `BottomSheet`, `Tooltip` |
 
 **Total: 125+ Components** across 8 comprehensive categories
 
-## 🛠️ Technology Stack
+## Technology Stack
 
 - **Jetpack Compose** - Modern declarative UI toolkit
 - **Material 3 Enhanced** - Custom implementation inspired by expressive design principles
@@ -55,7 +55,7 @@ Open in Android Studio and run the project. Browse components by category and co
 - **Navigation Compose** - Type-safe navigation architecture
 - **State Management** - Advanced Compose state patterns
 
-## 💡 Usage Examples
+## Usage Examples
 
 ### DatePicker Component
 ```kotlin
@@ -114,7 +114,7 @@ fun YourApp() {
 }
 ```
 
-## 📁 Project Structure
+## Project Structure
 
 ```
 app/src/main/java/com/example/androidui/
@@ -134,7 +134,7 @@ app/src/main/java/com/example/androidui/
 └── MainActivity.kt               # Entry point
 ```
 
-## 🎨 Enhanced Material 3 Features
+## Enhanced Material 3 Features
 
 - **Dynamic Colors** - Vibrant, emotionally resonant color palettes
 - **Advanced Typography** - Improved contrast and readability  
@@ -142,7 +142,7 @@ app/src/main/java/com/example/androidui/
 - **Performance Optimization** - Lazy loading and efficient state management
 - **Dark/Light Themes** - Beautiful theming for all preferences
 
-## 🏗️ Architecture
+## Architecture
 
 Built with modern Android architecture patterns:
 
@@ -152,7 +152,7 @@ Built with modern Android architecture patterns:
 - **Compose Navigation** - Type-safe navigation
 - **Material 3 Guidelines** - Following latest design principles
 
-## 📱 Requirements
+## Requirements
 
 - Android Studio Arctic Fox or newer
 - Compile SDK 34+
@@ -165,7 +165,7 @@ This is a **comprehensive reference library** for Material 3 Compose development
 
 > **Note**: This repository serves as a curated reference collection. For questions or suggestions, please use the repository's discussion features.
 
-## 📄 License
+## License
 
 ```
 MIT License
@@ -191,16 +191,16 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 ```
 
-## ⭐ Support
+## Support
 
 If this project helps you, please consider:
-- ⭐ **Starring** this repository
-- 🐛 **Reporting** bugs and issues  
-- 💡 **Suggesting** new components or improvements
-- 🔄 **Sharing** with other developers
+- **Starring** this repository
+- **Reporting** bugs and issues  
+- **Suggesting** new components or improvements
+- **Sharing** with other developers
 
 ---
 
-**Built with ❤️ for the Android developer community**
+**Built for the Android developer community**
 
 *Making Material 3 component development effortless, one component at a time.*

@@ -6,7 +6,7 @@ Thank you for your interest in the Compose Cookbook! This repository serves as a
 
 This is a **curated reference collection** designed to help Android developers find production-ready Material 3 component implementations. The repository is maintained as a high-quality resource for the developer community.
 
-## 💡 How to Use This Repository
+## How to Use This Repository
 
 ### For Developers
 
@@ -20,12 +20,12 @@ This repository is designed as a **reference and learning resource**:
 ### Repository Purpose
 
 This is a **curated reference library** maintained to provide:
-- ✅ **High-quality component examples**
-- ✅ **Production-ready code patterns**  
-- ✅ **Material 3 implementation guidance**
-- ✅ **Architecture best practices**
+- **High-quality component examples**
+- **Production-ready code patterns**  
+- **Material 3 implementation guidance**
+- **Architecture best practices**
 
-## 🛠️ Technical Information
+## Technical Information
 
 ### Development Environment
 
@@ -39,7 +39,7 @@ This repository is built with:
 
 The codebase follows clean architecture principles with clear separation of concerns, making it an excellent reference for professional Android development.
 
-## 🎨 Component Architecture
+## Component Architecture
 
 ### Design Patterns Used
 
@@ -63,11 +63,11 @@ fun ComponentExample(
 ### Quality Standards
 
 Every component meets these standards:
-- ✅ **Material 3 compliant** - Following latest design guidelines
-- ✅ **Accessibility ready** - Proper semantic descriptions and touch targets
-- ✅ **Performance optimized** - Efficient recomposition and state management
-- ✅ **Preview enabled** - `@Preview` annotations for easy visualization
-- ✅ **Documentation included** - Clear usage examples and KDoc comments
+- **Material 3 compliant** - Following latest design guidelines
+- **Accessibility ready** - Proper semantic descriptions and touch targets
+- **Performance optimized** - Efficient recomposition and state management
+- **Preview enabled** - `@Preview` annotations for easy visualization
+- **Documentation included** - Clear usage examples and KDoc comments
 
 ## 📚 Learning Resources
 
@@ -81,18 +81,18 @@ Every component meets these standards:
 - [Android Architecture Guidelines](https://developer.android.com/topic/architecture) - Best practices
 - [Compose Samples](https://github.com/android/compose-samples) - Additional examples
 
-## 🎯 Repository Maintenance
+## Repository Maintenance
 
 This repository is maintained as a **high-quality reference resource** for the Android development community. The focus is on providing:
 
-- ✅ **Comprehensive component coverage** - 125+ Material 3 components
-- ✅ **Production-ready implementations** - Copy-paste friendly code
-- ✅ **Consistent quality standards** - Professional architecture patterns
-- ✅ **Regular updates** - Keeping pace with Material 3 evolution
-- ✅ **Clear documentation** - Easy to understand and implement
+- **Comprehensive component coverage** - 125+ Material 3 components
+- **Production-ready implementations** - Copy-paste friendly code
+- **Consistent quality standards** - Professional architecture patterns
+- **Regular updates** - Keeping pace with Material 3 evolution
+- **Clear documentation** - Easy to understand and implement
 
 ---
 
-**Built with ❤️ as a comprehensive reference for the Android developer community**
+**Built as a comprehensive reference for the Android developer community**
 
 *Making Material 3 component development effortless, one component at a time.*

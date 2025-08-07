@@ -8,11 +8,11 @@ on:
 
 jobs:
   build:
-    name: 🔨 Build & Test
+    name: Build & Test
     runs-on: ubuntu-latest
     
     steps:
-    - name: 📥 Checkout Repository
+    - name: Checkout Repository
       uses: actions/checkout@v4
       
     - name: ☕ Set up JDK 17
@@ -21,7 +21,7 @@ jobs:
         java-version: '17'
         distribution: 'temurin'
         
-    - name: 📦 Cache Gradle packages
+    - name: Cache Gradle packages
       uses: actions/cache@v4
       with:
         path: |
@@ -31,11 +31,11 @@ jobs:
         restore-keys: |
           ${{ runner.os }}-gradle-
           
-    - name: 🔧 Grant execute permission for gradlew
+    - name: Grant execute permission for gradlew
       run: chmod +x gradlew
       
-    - name: 🔨 Build Debug APK
+    - name: Build Debug APK
       run: ./gradlew assembleDebug
       
-    - name: ✅ Build Success
-      run: echo "🎉 Build completed successfully!"
+    - name: Build Success
+      run: echo "Build completed successfully!"

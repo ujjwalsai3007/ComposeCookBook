@@ -141,7 +141,7 @@ private fun SearchAndFilterSection(
                         else CompletionStatus.COMPLETED
                     )
                 },
-                label = { Text("✅ Complete") }
+                label = { Text("Complete") }
             )
             
             FilterChip(
@@ -163,7 +163,7 @@ private fun SearchAndFilterSection(
                         else CompletionStatus.PLANNED
                     )
                 },
-                label = { Text("📋 Planned") }
+                label = { Text("Planned") }
             )
         }
     }
@@ -340,10 +340,10 @@ private fun CategoryCard(
 @Composable
 private fun StatusBadge(status: CompletionStatus) {
     val (emoji, color) = when (status) {
-        CompletionStatus.COMPLETED -> "✅" to MaterialTheme.colorScheme.primary
-        CompletionStatus.IN_PROGRESS -> "🚧" to MaterialTheme.colorScheme.secondary
-        CompletionStatus.PLANNED -> "📋" to MaterialTheme.colorScheme.outline
-        CompletionStatus.EXPERIMENTAL -> "🧪" to MaterialTheme.colorScheme.tertiary
+        CompletionStatus.COMPLETED -> "✓" to MaterialTheme.colorScheme.primary
+        CompletionStatus.IN_PROGRESS -> "◐" to MaterialTheme.colorScheme.secondary
+        CompletionStatus.PLANNED -> "◐" to MaterialTheme.colorScheme.outline
+        CompletionStatus.EXPERIMENTAL -> "◌" to MaterialTheme.colorScheme.tertiary
     }
     
     Text(

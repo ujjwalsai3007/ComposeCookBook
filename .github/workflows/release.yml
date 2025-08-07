@@ -1,4 +1,4 @@
-name: 🚀 Release
+name: Release
 
 on:
   workflow_dispatch:
@@ -10,11 +10,11 @@ on:
 
 jobs:
   release:
-    name: 🏗️ Create Release
+    name: Create Release
     runs-on: ubuntu-latest
     
     steps:
-    - name: 📥 Checkout Repository
+    - name: Checkout Repository
       uses: actions/checkout@v4
         
     - name: ☕ Set up JDK 17
@@ -23,33 +23,33 @@ jobs:
         java-version: '17'
         distribution: 'temurin'
         
-    - name: 🔧 Grant execute permission for gradlew
+    - name: Grant execute permission for gradlew
       run: chmod +x gradlew
         
-    - name: 🔨 Build Release APK
+    - name: Build Release APK
       run: ./gradlew assembleRelease
       
-    - name: 🏷️ Create Release
+    - name: Create Release
       uses: actions/create-release@v1
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       with:
         tag_name: ${{ github.event.inputs.version }}
-        release_name: 🎉 Compose Cookbook ${{ github.event.inputs.version }}
+        release_name: Compose Cookbook ${{ github.event.inputs.version }}
         body: |
-          ## 🎉 Compose Cookbook Release
+          ## Compose Cookbook Release
           
-          ### ✨ Features
-          - 📱 **125+ Material 3 Components** - Complete component library
-          - 🎨 **Enhanced Theming** - Custom Material 3 expressive colors  
-          - ⚡ **Performance Optimized** - Production-ready implementations
+          ### Features
+          - **125+ Material 3 Components** - Complete component library
+          - **Enhanced Theming** - Custom Material 3 expressive colors  
+          - **Performance Optimized** - Production-ready implementations
           
-          ### 🔧 Installation
+          ### Installation
           ```bash
           git clone https://github.com/ujjwalsai3007/ComposeCookBook.git
           cd ComposeCookBook
           ```
           
-          **Built with ❤️ for the Android developer community**
+          **Built for the Android developer community**
         draft: false
         prerelease: false

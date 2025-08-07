@@ -44,7 +44,7 @@ fun ChipsScreen() {
                 modifier = Modifier.padding(16.dp)
             ) {
                 Text(
-                    text = "🎉 FINAL CATEGORY! 🎉",
+                    text = "FINAL CATEGORY!",
                     style = MaterialTheme.typography.labelLarge,
                     fontWeight = FontWeight.Bold,
                     color = MaterialTheme.colorScheme.primary,
@@ -1015,7 +1015,7 @@ private fun SuggestionChipSection() {
                     // Location-based
                     Column {
                         Text(
-                            text = "📍 Location-based:",
+                            text = "Location-based:",
                             style = MaterialTheme.typography.labelMedium,
                             fontWeight = FontWeight.Medium,
                             modifier = Modifier.padding(bottom = 8.dp)
@@ -1069,7 +1069,7 @@ private fun SuggestionChipSection() {
                     // Activity-based
                     Column {
                         Text(
-                            text = "🎯 Activity-based:",
+                            text = "Activity-based:",
                             style = MaterialTheme.typography.labelMedium,
                             fontWeight = FontWeight.Medium,
                             modifier = Modifier.padding(bottom = 8.dp)
@@ -1126,7 +1126,7 @@ private fun AdvancedPatternsSection() {
                     )
                 ) {
                     Text(
-                        text = "🎉 100% COMPLETE! 🎉",
+                        text = "100% COMPLETE!",
                         style = MaterialTheme.typography.labelLarge,
                         fontWeight = FontWeight.Bold,
                         color = MaterialTheme.colorScheme.onPrimaryContainer,
@@ -1307,12 +1307,12 @@ private fun AdvancedPatternsSection() {
         }
         
         item {
-            SectionCard(title = "🎊 Project Completion Summary 🎊") {
+            SectionCard(title = "Project Completion Summary") {
                 Column(
                     verticalArrangement = Arrangement.spacedBy(12.dp)
                 ) {
                     Text(
-                        text = "Congratulations! 🎉",
+                        text = "Congratulations!",
                         style = MaterialTheme.typography.headlineSmall,
                         fontWeight = FontWeight.Bold,
                         color = MaterialTheme.colorScheme.primary,
@@ -1330,7 +1330,7 @@ private fun AdvancedPatternsSection() {
                             horizontalAlignment = Alignment.CenterHorizontally
                         ) {
                             Text(
-                                text = "🏆 COMPLETE COMPONENT LIBRARY 🏆",
+                                text = "COMPLETE COMPONENT LIBRARY",
                                 style = MaterialTheme.typography.titleLarge,
                                 fontWeight = FontWeight.Bold,
                                 textAlign = TextAlign.Center
@@ -1349,19 +1349,19 @@ private fun AdvancedPatternsSection() {
                         horizontalArrangement = Arrangement.SpaceEvenly
                     ) {
                         Column(horizontalAlignment = Alignment.CenterHorizontally) {
-                            Text("✅", style = MaterialTheme.typography.headlineMedium)
+                            Text("✓", style = MaterialTheme.typography.headlineMedium)
                             Text("Buttons", style = MaterialTheme.typography.labelMedium)
                         }
                         Column(horizontalAlignment = Alignment.CenterHorizontally) {
-                            Text("✅", style = MaterialTheme.typography.headlineMedium)
+                            Text("✓", style = MaterialTheme.typography.headlineMedium)
                             Text("Cards", style = MaterialTheme.typography.labelMedium)
                         }
                         Column(horizontalAlignment = Alignment.CenterHorizontally) {
-                            Text("✅", style = MaterialTheme.typography.headlineMedium)
+                            Text("✓", style = MaterialTheme.typography.headlineMedium)
                             Text("Input", style = MaterialTheme.typography.labelMedium)
                         }
                         Column(horizontalAlignment = Alignment.CenterHorizontally) {
-                            Text("✅", style = MaterialTheme.typography.headlineMedium)
+                            Text("✓", style = MaterialTheme.typography.headlineMedium)
                             Text("Progress", style = MaterialTheme.typography.labelMedium)
                         }
                     }
@@ -1371,19 +1371,19 @@ private fun AdvancedPatternsSection() {
                         horizontalArrangement = Arrangement.SpaceEvenly
                     ) {
                         Column(horizontalAlignment = Alignment.CenterHorizontally) {
-                            Text("✅", style = MaterialTheme.typography.headlineMedium)
+                            Text("✓", style = MaterialTheme.typography.headlineMedium)
                             Text("Navigation", style = MaterialTheme.typography.labelMedium)
                         }
                         Column(horizontalAlignment = Alignment.CenterHorizontally) {
-                            Text("✅", style = MaterialTheme.typography.headlineMedium)
+                            Text("✓", style = MaterialTheme.typography.headlineMedium)
                             Text("Lists", style = MaterialTheme.typography.labelMedium)
                         }
                         Column(horizontalAlignment = Alignment.CenterHorizontally) {
-                            Text("✅", style = MaterialTheme.typography.headlineMedium)
+                            Text("✓", style = MaterialTheme.typography.headlineMedium)
                             Text("Dialogs", style = MaterialTheme.typography.labelMedium)
                         }
                         Column(horizontalAlignment = Alignment.CenterHorizontally) {
-                            Text("🎉", style = MaterialTheme.typography.headlineMedium)
+                            Text("✓", style = MaterialTheme.typography.headlineMedium)
                             Text("Chips", style = MaterialTheme.typography.labelMedium)
                         }
                     }

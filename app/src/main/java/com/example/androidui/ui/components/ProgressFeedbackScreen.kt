@@ -500,7 +500,7 @@ private fun SnackbarShowcase(snackbarHostState: SnackbarHostState) {
                 onClick = {
                     scope.launch {
                         snackbarHostState.showSnackbar(
-                            message = "✅ Success! Operation completed",
+                            message = "Success! Operation completed",
                             actionLabel = "View"
                         )
                     }
@@ -517,7 +517,7 @@ private fun SnackbarShowcase(snackbarHostState: SnackbarHostState) {
                 onClick = {
                     scope.launch {
                         snackbarHostState.showSnackbar(
-                            message = "⚠️ Warning: Check your input",
+                            message = "Warning: Check your input",
                             actionLabel = "Fix"
                         )
                     }
@@ -535,7 +535,7 @@ private fun SnackbarShowcase(snackbarHostState: SnackbarHostState) {
             onClick = {
                 scope.launch {
                     snackbarHostState.showSnackbar(
-                        message = "❌ Error: Something went wrong",
+                        message = "Error: Something went wrong",
                         actionLabel = "Retry"
                     )
                 }
